@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grant Inventory | AEAH.ORG</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --grant-gold: #d4af37;
+            --tech-blue: #00d2ff;
+            --dark-bg: #050505;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #eee;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .header { text-align: center; margin-bottom: 50px; }
+        h1 { font-family: 'Orbitron'; color: var(--grant-gold); letter-spacing: 2px; }
+
+        .grant-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #111;
+            border-radius: 10px;
+            overflow: hidden;
+            font-size: 0.9rem;
+        }
+
+        .grant-table th {
+            background: #1a1a1a;
+            color: var(--tech-blue);
+            text-align: left;
+            padding: 20px;
+            font-family: 'Orbitron';
+            font-size: 0.75rem;
+        }
+
+        .grant-table td {
+            padding: 20px;
+            border-bottom: 1px solid #222;
+            vertical-align: top;
+        }
+
+        .grant-name { color: var(--grant-gold); font-weight: bold; }
+        .tag { font-size: 0.7rem; background: #222; padding: 3px 8px; border-radius: 4px; color: #888; }
+        
+        .requirement-list { list-style: none; padding: 0; margin-top: 5px; font-size: 0.8rem; color: #aaa; }
+        .requirement-list li::before { content: "• "; color: var(--grant-gold); }
+
+        .btn-apply {
+            display: inline-block;
+            padding: 8px 15px;
+            border: 1px solid var(--grant-gold);
+            color: var(--grant-gold);
+            text-decoration: none;
+            font-size: 0.75rem;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Strategic Funding Matrix</h1>
+        <p>20 High-Value Targets for Advancing Human Sovereignty and Community Innovation.</p>
+    </div>
+
+    <table class="grant-table">
+        <thead>
+            <tr>
+                <th>Grant & Provider</th>
+                <th>Problem We Are Fixing</th>
+                <th>Innovation / Community Project</th>
+                <th>Requirement Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="grant-name">Urban Innovation Grant</span><br><span class="tag">Bloomberg Philanthropies</span></td>
+                <td>Inefficient and exploitative smart-city grids that ignore biological health.</td>
+                <td><strong>Next-Wave City Hubs:</strong> Community labs for kids to design bio-balanced neighborhood tech.</td>
+                <td><ul class="requirement-list"><li>Tier 3 Verified City Partner</li><li>Open-Source Logic</li></ul></td>
+            </tr>
+            <tr>
+                <td><span class="grant-name">Health Equity Research Grant</span><br><span class="tag">Robert Wood Johnson Foundation</span></td>
+                <td>Medical ignorance regarding the "Generator Effect" and tech-induced tumors.</td>
+                <td><strong>The Temple Audit:</strong> Funding Tier 3 Medical Practitioners to publish tech-pathology papers.</td>
+                <td><ul class="requirement-list"><li>Clinical Evidence Base</li><li>501(c)(3) Active</li></ul></td>
+            </tr>
+            <tr>
+                <td><span class="grant-name">Digital Freedom Fund</span><br><span class="tag">Knight Foundation</span></td>
+                <td>Lack of 2-way communication laws and neural privacy protections.</td>
+                <td><strong>The 28th Amendment Project:</strong> Legal advocacy to update the "Books" for AI/Frequency Law.</td>
+                <td><ul class="requirement-list"><li>Legal Precedent Tracker</li><li>Public Awareness Campaign</li></ul></td>
+            </tr>
+            <tr>
+                <td><span class="grant-name">Community Tech Grant</span><br><span class="tag">NTIA / Department of Commerce</span></td>
+                <td>Low-income technological ignorance and device dependency.</td>
+                <td><strong>The Hero Gear Workshops:</strong> Providing kids with kits to build *Sovereign Devices* not tracking tools.</td>
+                <td><ul class="requirement-list"><li>Inter-City Connectivity</li><li>Educational Framework</li></ul></td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align:center; color:#555; padding: 40px;">
+                    ... 16 additional targets spanning Civil Liberties, Youth Development, and Bio-Tech Security listed in the Full Grant Prospectus ...
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
