@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unified Front | AEAH & SEXYHEROS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-pink: #ff2d75;
+            --tech-blue: #00d2ff;
+            --dark-bg: #050505;
+            --partner-grey: #1a1a1a;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .network-header {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('network-web.jpg');
+            border-bottom: 2px solid var(--tech-blue);
+        }
+
+        .network-header h1 { font-family: 'Orbitron'; font-size: 2.5rem; letter-spacing: 2px; }
+
+        .partner-matrix {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .partner-card {
+            background: var(--partner-grey);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #333;
+            transition: 0.3s;
+        }
+
+        .partner-card:hover { border-color: var(--neon-pink); }
+
+        .partner-card h3 { font-family: 'Orbitron'; color: var(--tech-blue); margin-bottom: 10px; }
+        .partner-card p { font-size: 0.85rem; color: #ccc; }
+
+        .synergy-box {
+            background: rgba(255, 45, 117, 0.1);
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            border-left: 3px solid var(--neon-pink);
+        }
+
+        .alliance-manifesto {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #111;
+            padding: 50px;
+            border: 1px solid var(--tech-blue);
+            text-align: center;
+        }
+
+        .btn-join {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 40px;
+            background: var(--tech-blue);
+            color: black;
+            font-family: 'Orbitron';
+            font-weight: 900;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="network-header">
+        <h1>The Unified Front</h1>
+        <p>Combining forces with leaders in tech, law, and human rights to heal the national body.</p>
+    </section>
+
+    <div class="partner-matrix">
+        
+        <div class="partner-card">
+            <h3>EFF Integration</h3>
+            <p>Collaborating with the <em>Electronic Frontier Foundation</em> to provide the legal muscle for neural privacy.</p>
+            <div class="synergy-box">
+                <strong>Project:</strong> Joint litigation against frequency-based digital trespass.
+            </div>
+        </div>
+
+        <div class="partner-card">
+            <h3>Humane Tech Alliance</h3>
+            <p>Working with the <em>Center for Humane Technology</em> to expose the "Generator Effect" of addictive UI/UX.</p>
+            <div class="synergy-box">
+                <strong>Project:</strong> National "Operator Awareness" Curriculum for schools.
+            </div>
+        </div>
+
+        <div class="partner-card">
+            <h3>Community Youth Hubs</h3>
+            <p>Partnering with local <em>Boys & Girls Clubs</em> to house our Innovation Design Labs.</p>
+            <div class="synergy-box">
+                <strong>Project:</strong> "Next-Wave" workshops where kids build sovereign neighborhood tech.
+            </div>
+        </div>
+
+        <div class="partner-card">
+            <h3>Medical Ethics Board</h3>
+            <p>Connecting with <em>Independent Medical Research Councils</em> to peer-review our tech-pathology findings.</p>
+            <div class="synergy-box">
+                <strong>Project:</strong> Including "Frequency Sensitivity" in the 2027 Diagnostic Books.
+            </div>
+        </div>
+
+    </div>
+
+    <div class="alliance-manifesto">
+        <h2>The Sovereign Alliance Agreement</h2>
+        <p>All partners must acknowledge that the human body is a <span style="color:var(--tech-blue)">Biotechnology Temple</span> and that our current legal/medical ignorance is a threat to the United States' survival.</p>
+        <a href="#" class="btn-join">Propose Partnership</a>
+    </div>
+
+</body>
+</html>
