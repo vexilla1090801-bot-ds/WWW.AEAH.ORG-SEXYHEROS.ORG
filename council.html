@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Council | SEXYHEROS.ORG</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --hero-pink: #ff2d75;
+            --hero-gold: #d4af37;
+            --dark-bg: #050505;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .council-header {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('hero-banner.jpg');
+            border-bottom: 2px solid var(--hero-pink);
+        }
+
+        .council-header h1 { font-family: 'Orbitron'; font-size: 3rem; color: var(--hero-pink); }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .profile-card {
+            background: #111;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #222;
+            text-align: center;
+            padding-bottom: 30px;
+            transition: 0.3s;
+        }
+
+        .profile-card:hover { border-color: var(--hero-pink); transform: translateY(-10px); }
+
+        .profile-img {
+            width: 100%;
+            height: 300px;
+            background: #222; /* Placeholder for the 4 women's photos */
+            object-fit: cover;
+            border-bottom: 3px solid var(--hero-pink);
+        }
+
+        .profile-card h3 { font-family: 'Orbitron'; margin: 20px 0 5px; color: var(--hero-gold); }
+        .profile-card span { color: #777; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; }
+
+        .mission-statement {
+            max-width: 800px;
+            margin: 40px auto;
+            text-align: center;
+            background: rgba(255, 45, 117, 0.05);
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px dashed var(--hero-pink);
+        }
+
+        .prop-seal {
+            width: 100px;
+            margin-top: 20px;
+            opacity: 0.8;
+        }
+
+        .btn-connect {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: var(--hero-pink);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="council-header">
+        <h1>The Hero Council</h1>
+        <p>Four voices. One mission: Reclaiming goodness through authentic influence.</p>
+    </section>
+
+    <div class="mission-statement">
+        <h2>"We’ve lived the lessons."</h2>
+        <p>SexyHeros was founded by four women who understand that 'trouble' is often just a stepping stone to truth. We don't hide our pasts; we use them as the fuel to protect the next generation of 'test subjects' from electronic abuse and device dependency.</p>
+        <strong>Our promise: To bring out your good parts so you do less bad things.</strong>
+    </div>
+
+    <div class="profile-grid">
+        <div class="profile-card">
+            <div class="profile-img" style="background: url('hero1.jpg') center/cover;"></div>
+            <h3>The Visionary</h3>
+            <span>Founding Member</span>
+            <p style="padding: 15px; font-size: 0.85rem;">Specializing in legislative reform and frequency advocacy.</p>
+        </div>
+
+        <div class="profile-card">
+            <div class="profile-img" style="background: url('hero2.jpg') center/cover;"></div>
+            <h3>The Healer</h3>
+            <span>Founding Member</span>
+            <p style="padding: 15px; font-size: 0.85rem;">Focusing on medical outreach and anatomical tech-recovery.</p>
+        </div>
+
+        <div class="profile-card">
+            <div class="profile-img" style="background: url('hero3.jpg') center/cover;"></div>
+            <h3>The Shield</h3>
+            <span>Founding Member</span>
+            <p style="padding: 15px; font-size: 0.85rem;">Expert in cybersecurity and identity protection.</p>
+        </div>
+
+        <div class="profile-card">
+            <div class="profile-img" style="background: url('hero4.jpg') center/cover;"></div>
+            <h3>The Voice</h3>
+            <span>Founding Member</span>
+            <p style="padding: 15px; font-size: 0.85rem;">Lead influencer for cultural awareness and program outreach.</p>
+        </div>
+    </div>
+
+    <div style="text-align: center; padding-bottom: 60px;">
+        <p style="font-size: 0.8rem; color: #555;">VERIFIED HUMAN COUNCIL | TIER 4 SOVEREIGN IDENTITY ACTIVE</p>
+        <a href="#" class="btn-connect">Join the Hero Program</a>
+    </div>
+
+</body>
+</html>
