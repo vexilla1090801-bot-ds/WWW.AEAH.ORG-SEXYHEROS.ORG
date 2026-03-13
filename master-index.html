@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Index | AEAH Administrative Overlook</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --index-blue: #00d2ff;
+            --index-pink: #ff2d75;
+            --dark-bg: #050505;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #ccc;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .admin-header {
+            border-bottom: 2px solid var(--index-blue);
+            padding-bottom: 20px;
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .admin-header h1 { font-family: 'Orbitron'; color: white; margin: 0; letter-spacing: 2px; }
+
+        .phase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .phase-column {
+            background: #111;
+            border-radius: 10px;
+            padding: 25px;
+            border: 1px solid #222;
+        }
+
+        .phase-label {
+            font-family: 'Orbitron';
+            color: var(--index-pink);
+            font-size: 0.8rem;
+            margin-bottom: 20px;
+            display: block;
+            border-bottom: 1px solid #222;
+            padding-bottom: 10px;
+        }
+
+        .page-link-item {
+            display: block;
+            color: #eee;
+            text-decoration: none;
+            padding: 10px;
+            margin-bottom: 8px;
+            background: #1a1a1a;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            transition: 0.3s;
+        }
+
+        .page-link-item:hover {
+            background: var(--index-blue);
+            color: black;
+            transform: translateX(5px);
+        }
+
+        .page-num {
+            font-family: 'Orbitron';
+            font-size: 0.7rem;
+            opacity: 0.5;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="admin-header">
+        <div>
+            <h1>Master Overlook</h1>
+            <p style="font-size: 0.8rem; color: #666;">AEAH & SEXYHEROS Unified Digital Ecosystem</p>
+        </div>
+        <div style="text-align: right; font-family: 'Orbitron'; font-size: 0.7rem;">
+            SYSTEM STATUS: <span style="color: var(--index-blue);">OPTIMIZED</span>
+        </div>
+    </header>
+
+    <div class="phase-grid">
+        
+        <div class="phase-column">
+            <span class="phase-label">Phase I: Shielding & Identity</span>
+            <a href="#" class="page-link-item"><span class="page-num">01</span>Dual Entry Portal</a>
+            <a href="#" class="page-link-item"><span class="page-num">02</span>Identity Registry</a>
+            <a href="#" class="page-link-item"><span class="page-num">04</span>Intake Portal</a>
+            <a href="#" class="page-link-item"><span class="page-num">05</span>Global Dashboard</a>
+            <a href="#" class="page-link-item"><span class="page-num">09</span>Hero Gear Shop</a>
+            <a href="#" class="page-link-item"><span class="page-num">26</span>Member Dashboard</a>
+        </div>
+
+        <div class="phase-column">
+            <span class="phase-label">Phase II: Professional Inflection</span>
+            <a href="#" class="page-link-item"><span class="page-num">06</span>Practitioners Hub</a>
+            <a href="#" class="page-link-item"><span class="page-num">13</span>Medical Training</a>
+            <a href="#" class="page-link-item"><span class="page-num">14</span>Legal Training</a>
+            <a href="#" class="page-link-item"><span class="page-num">15</span>Innovation Hub</a>
+            <a href="#" class="page-link-item"><span class="page-num">20</span>Inflection Registry</a>
+            <a href="#" class="page-link-item"><span class="page-num">27</span>AI Audit Log</a>
+        </div>
+
+        <div class="phase-column">
+            <span class="phase-label">Phase III: Community Growth</span>
+            <a href="#" class="page-link-item"><span class="page-num">11</span>28th Amendment</a>
+            <a href="#" class="page-link-item"><span class="page-num">16</span>Next-Wave Lab</a>
+            <a href="#" class="page-link-item"><span class="page-num">22</span>City-Build Blueprint</a>
+            <a href="#" class="page-link-item"><span class="page-num">23</span>Sovereign Events</a>
+            <a href="#" class="page-link-item"><span class="page-num">28</span>Marketplace</a>
+            <a href="#" class="page-link-item"><span class="page-num">29</span>Sanctuary Map</a>
+        </div>
+
+        <div class="phase-column">
+            <span class="phase-label">Phase IV: The Legacy</span>
+            <a href="#" class="page-link-item"><span class="page-num">07</span>Sovereign Support</a>
+            <a href="#" class="page-link-item"><span class="page-num">08</span>The Hero Council</a>
+            <a href="#" class="page-link-item"><span class="page-num">17</span>Grant Inventory</a>
+            <a href="#" class="page-link-item"><span class="page-num">21</span>Master Proposal</a>
+            <a href="#" class="page-link-item"><span class="page-num">25</span>Sovereign Vault</a>
+            <a href="#" class="page-link-item"><span class="page-num">30</span>Exit Protocol</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
