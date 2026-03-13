@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio-Calibration | AEAH Temple Sync</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bio-cyan: #00f2ff;
+            --heart-red: #ff2d55;
+            --dark-bg: #020202;
+            --panel-bg: #0a0a0a;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #ccc;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .calib-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .calib-header h1 { font-family: 'Orbitron'; color: var(--bio-cyan); letter-spacing: 4px; }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .main-viz {
+            background: var(--panel-bg);
+            border: 1px solid #1a1a1a;
+            border-radius: 20px;
+            padding: 40px;
+            position: relative;
+            min-height: 500px;
+        }
+
+        .sidebar-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .stat-card {
+            background: #111;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 4px solid var(--bio-cyan);
+        }
+
+        .stat-label { font-family: 'Orbitron'; font-size: 0.75rem; color: #666; text-transform: uppercase; }
+        .stat-value { font-family: 'Orbitron'; font-size: 1.5rem; color: white; margin-top: 10px; display: block; }
+
+        .sync-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Orbitron';
+            font-size: 0.8rem;
+            color: var(--bio-cyan);
+            margin-bottom: 20px;
+        }
+
+        .pulse-dot {
+            width: 10px; height: 10px;
+            background: var(--bio-cyan);
+            border-radius: 50%;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
+
+        .btn-sync {
+            background: var(--bio-cyan);
+            color: black;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Orbitron';
+            font-weight: 900;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="calib-header">
+        <h1>TEMPLE CALIBRATION</h1>
+        <p>Aligning the Biological Signature with the Sovereign Shield.</p>
+    </section>
+
+    <div class="dashboard-grid">
+        
+        <div class="main-viz">
+            <div class="sync-status"><div class="pulse-dot"></div> HERO GEAR CONNECTED</div>
+            <h3 style="font-family: 'Orbitron'; color: white;">Neural Delta Scan</h3>
+            <p style="font-size: 0.8rem; color: #555;">Visualizing the dissipation of external frequency interference.</p>
+            
+            
+            
+            <div style="margin-top: 100px; border-top: 1px solid #222; padding-top: 20px;">
+                <p style="font-size: 0.85rem; line-height: 1.6;">
+                    <b>Analysis:</b> The "New Skin" shielding has reduced ambient signal penetration by 94%. 
+                    Sympathetic nervous system response is stabilizing. 
+                    Bio-rhythms are returning to <b>Sovereign Baseline</b>.
+                </p>
+            </div>
+        </div>
+
+        <div class="sidebar-stats">
+            <div class="stat-card">
+                <span class="stat-label">Neural Clarity Score</span>
+                <span class="stat-value">92 / 100</span>
+            </div>
+            <div class="stat-card" style="border-left-color: var(--heart-red);">
+                <span class="stat-label">Vagal Tone (Recovery)</span>
+                <span class="stat-value">+14.2%</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Interference Mitigation</span>
+                <span class="stat-value">7.2GHz Masked</span>
+            </div>
+            
+            <button class="btn-sync">RUN FULL RECALIBRATION</button>
+        </div>
+
+    </div>
+
+</body>
+</html>
