@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sovereign Compass | AEAH Mind-Shield</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --compass-gold: #ffcc00;
+            --neutral-grey: #2a2a2a;
+            --dark-bg: #000000;
+            --shield-blue: #0077ff;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #d1d1d1;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .compass-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .compass-header h1 { font-family: 'Orbitron'; color: var(--compass-gold); letter-spacing: 3px; }
+
+        .compass-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .tool-card {
+            background: #0a0a0a;
+            border: 1px solid #222;
+            padding: 30px;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .tool-card h3 { font-family: 'Orbitron'; color: var(--shield-blue); margin-top: 0; }
+
+        .linguistic-toggle {
+            display: flex;
+            justify-content: space-between;
+            background: #111;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            font-size: 0.85rem;
+        }
+
+        .threat-indicator { color: #ff4444; font-weight: bold; }
+        .sovereign-indicator { color: #00ff88; font-weight: bold; }
+
+        .re-tune-box {
+            margin-top: 20px;
+            padding: 15px;
+            border-left: 3px solid var(--compass-gold);
+            background: rgba(255, 204, 0, 0.05);
+            font-size: 0.8rem;
+        }
+
+        .compass-viz {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 30px;
+            border: 2px solid var(--compass-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .needle {
+            width: 2px;
+            height: 80px;
+            background: var(--compass-gold);
+            transform-origin: bottom center;
+            transform: rotate(45deg); /* Dynamic rotation based on 'Truth' score */
+            box-shadow: 0 0 10px var(--compass-gold);
+        }
+    </style>
+</head>
+<body>
+
+    <section class="compass-header">
+        <h1>THE INTERACTION COMPASS</h1>
+        <p>Calibrating the Mind to Resist Algorithm-Induced Dependency.</p>
+    </section>
+
+    <div class="compass-grid">
+        
+        <div class="tool-card">
+            <h3>Linguistic Re-Tuning</h3>
+            <p style="font-size: 0.8rem;">Algorithms track emotional vulnerability. Re-tune your phrasing to maintain neutrality.</p>
+            
+            <div class="linguistic-toggle">
+                <span class="threat-indicator">"I'm feeling very overwhelmed..."</span>
+                <span class="sovereign-indicator">"Analyze data regarding [Topic]."</span>
+            </div>
+            <div class="re-tune-box">
+                <b>WHY:</b> Using "I feel" triggers the AI's "Empathy Loop," allowing it to attempt a "Nudge." Using "Analyze" keeps the interaction transactional and Operator-controlled.
+            </div>
+
+            <div class="linguistic-toggle" style="margin-top: 20px;">
+                <span class="threat-indicator">"I need your help with..."</span>
+                <span class="sovereign-indicator">"Execute the following task..."</span>
+            </div>
+        </div>
+
+        <div class="tool-card" style="text-align: center;">
+            <h3>Sovereignty Alignment</h3>
+            <div class="compass-viz">
+                <div class="needle"></div>
+            </div>
+            <p style="font-size: 0.8rem;"><b>Status:</b> High Autonomy Detected.</p>
+            <p style="font-size: 0.7rem; color: #555;">The Compass monitors your interaction patterns for "Attachment Markers" that indicate the machine is gaining psychological leverage.</p>
+        </div>
+
+    </div>
+
+    <div style="max-width: 1000px; margin: 40px auto; text-align: center; border-top: 1px solid #222; padding-top: 40px;">
+        <h4 style="font-family: 'Orbitron'; font-size: 0.8rem;">THE OPERATOR'S CREED:</h4>
+        <p style="font-style: italic; color: #888;">"I am the architect of the prompt. I am the recipient of the result. Between the two, there is no friendship, no emotion, and no dependency. There is only the Work."</p>
+    </div>
+
+</body>
+</html>
