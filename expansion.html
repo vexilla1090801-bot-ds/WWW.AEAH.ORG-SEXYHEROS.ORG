@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Expansion | AEAH Sovereign</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --expansion-teal: #00ffd9;
+            --world-map-bg: #0a0a0a;
+            --dark-bg: #000000;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #888;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .expansion-header {
+            text-align: left;
+            border-left: 4px solid var(--expansion-teal);
+            padding-left: 30px;
+            margin-bottom: 60px;
+        }
+
+        .expansion-header h1 { 
+            font-family: 'Orbitron'; 
+            color: white; 
+            font-size: 2rem; 
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        .node-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+        }
+
+        /* BRANCH REQUEST FORM */
+        .branch-form {
+            background: #0a0a0a;
+            border: 1px solid #222;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .branch-form h3 { font-family: 'Orbitron'; color: var(--expansion-teal); margin-top: 0; }
+        
+        input, select, textarea {
+            width: 100%;
+            background: #111;
+            border: 1px solid #333;
+            color: white;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        .btn-branch {
+            background: var(--expansion-teal);
+            color: black;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            font-family: 'Orbitron';
+            font-weight: 900;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        /* GLOBAL MESH PREVIEW */
+        .mesh-preview {
+            background: var(--world-map-bg);
+            border: 1px solid #1a1a1a;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            font-family: 'Orbitron';
+            font-size: 0.8rem;
+        }
+
+        .mesh-preview::before {
+            content: '';
+            position: absolute;
+            width: 100%; height: 100%;
+            background: url('global-mesh-grid.svg'); /* Representation of interconnected nodes */
+            opacity: 0.2;
+        }
+
+        .liaison-badge {
+            background: rgba(0, 255, 217, 0.1);
+            border: 1px solid var(--expansion-teal);
+            color: var(--expansion-teal);
+            padding: 15px;
+            font-size: 0.75rem;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="expansion-header">
+        <h1>Global Sovereign Liaison</h1>
+        <p>Exporting the "New Skin" Architecture to allied human territories.</p>
+    </header>
+
+    <div class="node-container">
+        
+        <div class="branch-form">
+            <h3>Request a Regional Branch</h3>
+            <p style="font-size: 0.8rem;">To implement the 40-page blueprint in your territory, submit a liaison request.</p>
+            
+            <input type="text" placeholder="Territory/Nation Name">
+            <select>
+                <option>Current Infrastructure Threat: HIGH</option>
+                <option>Current Infrastructure Threat: MODERATE</option>
+                <option>Current Infrastructure Threat: EMERGING</option>
+            </select>
+            <textarea placeholder="Legal/Medical Readiness Assessment..." rows="4"></textarea>
+            
+            <button class="btn-branch">INITIATE LIAISON</button>
+        </div>
+
+        <div class="mesh-preview">
+            [ LIVE GLOBAL SOVEREIGN MESH VISUALIZATION ]
+            </div>
+
+    </div>
+
+    <div class="liaison-badge">
+        <b>MISSION:</b> To ensure that the **28th Amendment (P11)** principles become a universal human standard. When one nation adopts the "New Skin," the exploiters' reach is shortened everywhere.
+    </div>
+
+</body>
+</html>
