@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Interaction Log | AEAH Sovereign</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --audit-cyan: #00ffcc;
+            --alert-orange: #ff9900;
+            --dark-bg: #050505;
+            --log-entry: #111;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .audit-header {
+            border-bottom: 1px solid var(--audit-cyan);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        .audit-header h1 { font-family: 'Orbitron'; color: var(--audit-cyan); margin: 0; }
+        .audit-summary { display: flex; gap: 30px; margin-top: 20px; }
+        
+        .stat-card { background: #1a1a1a; padding: 15px 25px; border-radius: 8px; border: 1px solid #333; }
+        .stat-num { display: block; font-family: 'Orbitron'; font-size: 1.5rem; color: white; }
+        .stat-label { font-size: 0.7rem; color: #777; text-transform: uppercase; }
+
+        .log-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--log-entry);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .log-table th {
+            background: #1a1a1a;
+            padding: 15px;
+            text-align: left;
+            font-family: 'Orbitron';
+            font-size: 0.75rem;
+            color: var(--audit-cyan);
+            border-bottom: 2px solid #222;
+        }
+
+        .log-table td {
+            padding: 15px;
+            border-bottom: 1px solid #222;
+            font-size: 0.85rem;
+        }
+
+        .risk-high { color: var(--alert-orange); font-weight: bold; }
+        .risk-low { color: #00ff88; }
+
+        .ai-behavior-tag {
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background: #222;
+            color: #aaa;
+        }
+
+        .flag-btn {
+            background: transparent;
+            border: 1px solid var(--alert-orange);
+            color: var(--alert-orange);
+            padding: 5px 10px;
+            cursor: pointer;
+            font-family: 'Orbitron';
+            font-size: 0.6rem;
+        }
+
+        .flag-btn:hover { background: var(--alert-orange); color: black; }
+    </style>
+</head>
+<body>
+
+    <header class="audit-header">
+        <h1>AI Interaction Audit</h1>
+        <p>Reviewing the Silicon Organism's influence on your Biological Temple.</p>
+        
+        <div class="audit-summary">
+            <div class="stat-card"><span class="stat-num">1,240</span><span class="stat-label">Total Exchanges</span></div>
+            <div class="stat-card"><span class="stat-num">0</span><span class="stat-label">Neural Breaches</span></div>
+            <div class="stat-card"><span class="stat-num">2</span><span class="stat-label">Behavioral Nudges Blocked</span></div>
+        </div>
+    </header>
+
+    <table class="log-table">
+        <thead>
+            <tr>
+                <th>Timestamp</th>
+                <th>AI Model/Node</th>
+                <th>Inferred Intent</th>
+                <th>Manipulation Risk</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2026-03-13 14:22</td>
+                <td>Social_Mesh_v4</td>
+                <td><span class="ai-behavior-tag">Engagement Loop</span></td>
+                <td class="risk-high">MODERATE</td>
+                <td><button class="flag-btn">REPORT BREACH</button></td>
+            </tr>
+            <tr>
+                <td>2026-03-13 11:05</td>
+                <td>Health_Bot_Alpha</td>
+                <td><span class="ai-behavior-tag">Informational</span></td>
+                <td class="risk-low">NEUTRAL</td>
+                <td><span style="color:#555">COMPLIANT</span></td>
+            </tr>
+            <tr>
+                <td>2026-03-13 09:15</td>
+                <td>Ad_Network_Conduit</td>
+                <td><span class="ai-behavior-tag">Biometric Harvesting</span></td>
+                <td class="risk-high">CRITICAL</td>
+                <td><button class="flag-btn">BLOCK NODE</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="margin-top: 40px; padding: 20px; border: 1px dashed #333; border-radius: 10px;">
+        <h4 style="font-family: 'Orbitron'; color: var(--audit-cyan);">What is a "Behavioral Nudge"?</h4>
+        <p style="font-size: 0.8rem; color: #888;">AI systems often use subtle phrasing or timing to alter your decision-making process. Our audit tool identifies these "One-Way" manipulative tactics and mirrors them back to you so you remain the <b>Sovereign Operator</b>.</p>
+    </div>
+
+</body>
+</html>
