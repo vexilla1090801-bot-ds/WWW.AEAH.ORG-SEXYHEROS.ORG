@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethics Board | AEAH Sovereign Court</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --court-blue: #00e5ff;
+            --jury-gold: #ffcc00;
+            --dark-bg: #020202;
+            --case-bg: #0a0a0a;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #ccc;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .court-header {
+            text-align: center;
+            border-bottom: 1px solid var(--court-blue);
+            padding-bottom: 30px;
+            margin-bottom: 50px;
+        }
+
+        .court-header h1 { font-family: 'Orbitron'; color: white; letter-spacing: 4px; }
+
+        .active-docket {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .case-card {
+            background: var(--case-bg);
+            border: 1px solid #222;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            transition: 0.3s;
+        }
+
+        .case-card:hover { border-color: var(--court-blue); }
+
+        .case-info h3 { font-family: 'Orbitron'; color: var(--court-blue); margin-top: 0; }
+        .evidence-tag { font-size: 0.7rem; color: #555; text-transform: uppercase; letter-spacing: 1px; }
+
+        .voting-module {
+            background: #111;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .vote-stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 15px 0;
+            font-family: 'Orbitron';
+            font-size: 0.8rem;
+        }
+
+        .btn-vote {
+            padding: 10px;
+            border: 1px solid var(--jury-gold);
+            color: var(--jury-gold);
+            background: transparent;
+            cursor: pointer;
+            font-family: 'Orbitron';
+            font-size: 0.7rem;
+            transition: 0.3s;
+        }
+
+        .btn-vote:hover { background: var(--jury-gold); color: black; }
+
+        .professional-opinion {
+            font-size: 0.8rem;
+            font-style: italic;
+            border-top: 1px solid #222;
+            padding-top: 15px;
+            margin-top: 15px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="court-header">
+        <h1>THE SOVEREIGN DOCKET</h1>
+        <p>Public Deliberation for Technology Compliance & Biological Safety.</p>
+    </section>
+
+    <div class="active-docket">
+        
+        <div class="case-card">
+            <div class="case-info">
+                <span class="evidence-tag">Case #992 | AI Interaction Protocol</span>
+                <h3>Project: "Cogni-Mirror"</h3>
+                <p>An AI model designed for "emotional support" that uses facial-micro-expression tracking to adjust its tone.</p>
+                <div class="professional-opinion">
+                    <b>Tier 3 Medical Lead:</b> "High risk of psychological dependency. The micro-expression tracking constitutes biometric harvesting without clear Operator off-switches."
+                </div>
+            </div>
+            <div class="voting-module">
+                <div class="vote-stats">
+                    <span style="color: #00ff88;">APPROVE: 12%</span>
+                    <span style="color: #ff4444;">REJECT: 88%</span>
+                </div>
+                <button class="btn-vote">CAST SOVEREIGN BALLOT</button>
+            </div>
+        </div>
+
+        <div class="case-card">
+            <div class="case-info">
+                <span class="evidence-tag">Case #993 | Bio-Technology / Food</span>
+                <h3>Hybrid "Smart-Grain" v2.0</h3>
+                <p>Genetically edited wheat designed to emit a specific radio-frequency ID tag for supply chain tracking.</p>
+                <div class="professional-opinion">
+                    <b>Tier 3 Legal Lead:</b> "Potential violation of the 28th Amendment. Ingesting RF-emitting biological matter is a permanent breach of neural privacy."
+                </div>
+            </div>
+            <div class="voting-module">
+                <div class="vote-stats">
+                    <span style="color: #00ff88;">APPROVE: 2%</span>
+                    <span style="color: #ff4444;">REJECT: 98%</span>
+                </div>
+                <button class="btn-vote">CAST SOVEREIGN BALLOT</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
