@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sovereign Marketplace | AEAH.ORG</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --market-gold: #d4af37;
+            --bio-green: #39ff14;
+            --dark-bg: #050505;
+            --card-bg: #111;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #eee;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .market-header {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('clean-market.jpg');
+            border-bottom: 2px solid var(--bio-green);
+        }
+
+        .market-header h1 { font-family: 'Orbitron'; font-size: 2.5rem; color: var(--market-gold); }
+
+        .filter-strip {
+            background: #1a1a1a;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            border-bottom: 1px solid #222;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 1px solid #444;
+            color: #888;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            font-family: 'Orbitron';
+        }
+
+        .filter-btn.active { border-color: var(--bio-green); color: var(--bio-green); }
+
+        .product-grid {
+            max-width: 1200px;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            border: 1px solid #222;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .product-card:hover { transform: translateY(-5px); border-color: var(--market-gold); }
+
+        .product-img {
+            width: 100%;
+            height: 200px;
+            background: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #444;
+            font-family: 'Orbitron';
+        }
+
+        .product-content { padding: 20px; }
+        .product-title { font-family: 'Orbitron'; font-size: 1.1rem; color: white; margin-bottom: 10px; display: block; }
+        
+        .temple-seal {
+            font-size: 0.65rem;
+            color: var(--bio-green);
+            text-transform: uppercase;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .price { font-family: 'Orbitron'; font-size: 1.2rem; color: var(--market-gold); }
+
+        .btn-buy {
+            background: var(--market-gold);
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.8rem;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="market-header">
+        <h1>The Sovereign Marketplace</h1>
+        <p>Verified Biotechnology & Hardware for the Human Temple.</p>
+    </section>
+
+    <div class="filter-strip">
+        <button class="filter-btn active">All Items</button>
+        <button class="filter-btn">Bio-Fuel (Food)</button>
+        <button class="filter-btn">Shielding Tech</button>
+        <button class="filter-btn">Seed Exchange</button>
+    </div>
+
+    <div class="product-grid">
+        
+        <div class="product-card">
+            <div class="product-img">[ IMAGE: HEIRLOOM SEED BOX ]</div>
+            <div class="product-content">
+                <span class="temple-seal">✓ AEAH BIO-CALIBRATED</span>
+                <span class="product-title">Foundational Grain Kit</span>
+                <p style="font-size: 0.8rem; color: #888;">Zero-modification heirloom seeds. Biotechnology that functions with the human digestive system, not against it.</p>
+                <div class="price-row">
+                    <span class="price">$45.00</span>
+                    <a href="#" class="btn-buy">Acquire</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">[ IMAGE: FARADAY DEVICE POUCH ]</div>
+            <div class="product-content">
+                <span class="temple-seal">✓ SHIELD VERIFIED</span>
+                <span class="product-title">Temple-Safe Signal Bag</span>
+                <p style="font-size: 0.8rem; color: #888;">Physical shielding that creates a "Neutral Zone" for your interactive devices when not in use.</p>
+                <div class="price-row">
+                    <span class="price">$32.00</span>
+                    <a href="#" class="btn-buy">Acquire</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">[ IMAGE: BIO-ROUTER ]</div>
+            <div class="product-content">
+                <span class="temple-seal">✓ SOVEREIGN AI COMPLIANT</span>
+                <span class="product-title">The Operator Router</span>
+                <p style="font-size: 0.8rem; color: #888;">Hardware with a physical kill-switch. No background harvesting. Built for community mesh networks.</p>
+                <div class="price-row">
+                    <span class="price">$185.00</span>
+                    <a href="#" class="btn-buy">Acquire</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
