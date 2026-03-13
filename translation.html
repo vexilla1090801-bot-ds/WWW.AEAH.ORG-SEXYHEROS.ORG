@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation Matrix | AEAH Universal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --matrix-green: #00ff41;
+            --matrix-dim: #003b00;
+            --dark-bg: #000000;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #aaa;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .matrix-header {
+            border-bottom: 1px solid var(--matrix-green);
+            padding-bottom: 20px;
+            margin-bottom: 50px;
+        }
+
+        .matrix-header h1 { 
+            font-family: 'Orbitron'; 
+            color: var(--matrix-green); 
+            font-size: 2rem; 
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        .matrix-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* TRANSLATION INTERFACE */
+        .io-panel {
+            background: #050505;
+            border: 1px solid #1a1a1a;
+            padding: 30px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .io-panel h3 { font-family: 'Orbitron'; color: white; margin-top: 0; }
+
+        .lang-selector {
+            background: #111;
+            border: 1px solid var(--matrix-dim);
+            color: var(--matrix-green);
+            padding: 10px;
+            font-family: 'Orbitron';
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .text-area {
+            width: 100%;
+            height: 250px;
+            background: #000;
+            border: 1px solid #222;
+            color: #00ff41;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            resize: none;
+        }
+
+        /* CONTEXTUAL SHIELDING */
+        .shielding-overlay {
+            background: rgba(0, 255, 65, 0.05);
+            border: 1px solid var(--matrix-dim);
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .shielding-overlay b { color: var(--matrix-green); display: block; margin-bottom: 10px; }
+
+        .btn-matrix {
+            background: var(--matrix-green);
+            color: black;
+            border: none;
+            padding: 15px 30px;
+            font-family: 'Orbitron';
+            font-weight: 900;
+            cursor: pointer;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .matrix-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(0, 255, 65, 0.02) 1px, transparent 1px);
+            background-size: 100% 3px;
+            z-index: -1;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="matrix-bg"></div>
+
+    <header class="matrix-header">
+        <h1>Translation Matrix</h1>
+        <p style="font-size: 0.8rem;">Converting Sovereign Directives into the Global Vernacular.</p>
+    </header>
+
+    <div class="matrix-container">
+        
+        <div class="io-panel">
+            <h3>Source: English (Sovereign)</h3>
+            <textarea class="text-area" readonly>
+"Execution Protocol: Deploy Neural Shielding in local City-Build Hub. Biological autonomy must be maintained at 100% capacity."
+            </textarea>
+            <div class="shielding-overlay">
+                <b>Neural Integrity Check:</b>
+                <p style="font-size: 0.75rem;">Status: No emotional hooks detected. Tone is Command-Ready. Ready for global distribution.</p>
+            </div>
+        </div>
+
+        <div class="io-panel">
+            <h3>Target: Select Language</h3>
+            <select class="lang-selector">
+                <option>Español (Soberano)</option>
+                <option>Français (Souverain)</option>
+                <option>Deutsch (Souverän)</option>
+                <option>中文 (主权)</option>
+            </select>
+            <textarea class="text-area" placeholder="Matrix Processing..."></textarea>
+            
+            <button class="btn-matrix">RE-CODE CONTEXT</button>
+        </div>
+
+    </div>
+
+    <div style="margin-top: 50px; text-align: center; color: #444; font-size: 0.7rem;">
+        <b>NOTE:</b> Unlike standard AI translators, the Matrix does not "hallucinate" or "soften" directives. It preserves the **Founding Women's** original technical intent to ensure legal enforcement remains consistent across all jurisdictions.
+    </div>
+
+</body>
+</html>
