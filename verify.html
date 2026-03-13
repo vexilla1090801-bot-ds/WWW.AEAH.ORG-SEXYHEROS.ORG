@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identity Registry | AEAH & SEXYHEROS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-pink: #ff2d75;
+            --tech-blue: #00d2ff;
+            --dark-bg: #050505;
+            --card-bg: #111;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        h1, h2 { font-family: 'Orbitron', sans-serif; text-align: center; text-transform: uppercase; }
+        
+        .header-section { margin-bottom: 60px; }
+        .header-section p { text-align: center; opacity: 0.7; max-width: 700px; margin: 10px auto; }
+
+        .tier-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Tier Card Styling */
+        .tier-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 30px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tier-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--tech-blue);
+            box-shadow: 0 10px 30px rgba(0, 210, 255, 0.2);
+        }
+
+        .tier-card.hero:hover {
+            border-color: var(--neon-pink);
+            box-shadow: 0 10px 30px rgba(255, 45, 117, 0.2);
+        }
+
+        .tier-badge {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.8rem;
+            background: rgba(255,255,255,0.1);
+            padding: 5px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .tier-title { font-size: 1.5rem; margin-bottom: 15px; color: var(--tech-blue); }
+        .hero .tier-title { color: var(--neon-pink); }
+
+        .verification-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        .verification-list li::before {
+            content: "✓ ";
+            color: #00ff88;
+            margin-right: 8px;
+        }
+
+        .proprietary-tag {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 3px solid var(--tech-blue);
+            padding: 10px;
+            font-size: 0.85rem;
+            font-style: italic;
+            margin-top: 15px;
+        }
+
+        .hero .proprietary-tag { border-left-color: var(--neon-pink); }
+
+        .btn-verify {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            text-align: center;
+            background: transparent;
+            border: 1px solid var(--tech-blue);
+            color: var(--tech-blue);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .hero .btn-verify { border-color: var(--neon-pink); color: var(--neon-pink); }
+
+        .btn-verify:hover { background: var(--tech-blue); color: black; }
+        .hero .btn-verify:hover { background: var(--neon-pink); color: white; }
+
+    </style>
+</head>
+<body>
+
+    <div class="header-section">
+        <h1>Global Identity Verification</h1>
+        <p>In a world of deepfakes and automated harassment, we verify the human behind the tech. Choose your tier of authenticity.</p>
+    </div>
+
+    <div class="tier-grid">
+        
+        <div class="tier-card">
+            <span class="tier-badge">Tier 1</span>
+            <div class="tier-title">The Signal</div>
+            <ul class="verification-list">
+                <li>Social Media Handshake</li>
+                <li>Device Integrity Check</li>
+                <li>Basic Human Validation</li>
+            </ul>
+            <div class="proprietary-tag">
+                <strong>Proprietary:</strong> Bot-Slayer Behavioral Analysis (Ensures no automated scripts).
+            </div>
+            <a href="#" class="btn-verify">Start Scan</a>
+        </div>
+
+        <div class="tier-card hero">
+            <span class="tier-badge">Tier 2</span>
+            <div class="tier-title">The Human Pulse</div>
+            <ul class="verification-list">
+                <li>Biometric Selfie-Sync</li>
+                <li>Government ID Matching</li>
+                <li>Anti-Spoofing Protocol</li>
+            </ul>
+            <div class="proprietary-tag">
+                <strong>Proprietary:</strong> Digital Fingerprint Audit (Vetting against harassment botnets).
+            </div>
+            <a href="#" class="btn-verify">Get Validated</a>
+        </div>
+
+        <div class="tier-card">
+            <span class="tier-badge">Tier 3</span>
+            <div class="tier-title">The Guardian</div>
+            <ul class="verification-list">
+                <li>Professional License Check</li>
+                <li>ESL/Medical Credentialing</li>
+                <li>Background Clearance</li>
+            </ul>
+            <div class="proprietary-tag">
+                <strong>Proprietary:</strong> New-Era Symptom Certification (Authorized Practitioner).
+            </div>
+            <a href="#" class="btn-verify">Verify Professional</a>
+        </div>
+
+        <div class="tier-card hero">
+            <span class="tier-badge">Tier 4</span>
+            <div class="tier-title">The Sovereign</div>
+            <ul class="verification-list">
+                <li>Blockchain Identity Shield</li>
+                <li>Full Ethical Disclosure</li>
+                <li>Human-Only Content Pledge</li>
+            </ul>
+            <div class="proprietary-tag">
+                <strong>Proprietary:</strong> Consent-Engine Verification (Guarantees non-AI, ethical production).
+            </div>
+            <a href="#" class="btn-verify">Apply for Sovereign</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
