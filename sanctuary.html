@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sovereign Sanctuary | AEAH.ORG</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --safe-green: #00ff88;
+            --alert-blue: #00d2ff;
+            --dark-bg: #050505;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar UI */
+        .map-sidebar {
+            width: 350px;
+            background: #000;
+            border-right: 1px solid #222;
+            padding: 30px;
+            overflow-y: auto;
+            z-index: 10;
+        }
+
+        .map-sidebar h1 { font-family: 'Orbitron'; color: var(--safe-green); font-size: 1.5rem; }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            font-size: 0.85rem;
+        }
+
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+
+        /* Map Canvas */
+        .map-view {
+            flex-grow: 1;
+            background: #111;
+            position: relative;
+            background-image: radial-gradient(#222 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .sanctuary-card {
+            background: #1a1a1a;
+            border-left: 3px solid var(--safe-green);
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .btn-sync {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: transparent;
+            border: 2px solid var(--alert-blue);
+            color: var(--alert-blue);
+            font-family: 'Orbitron';
+            text-decoration: none;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .pulse-marker {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: var(--safe-green);
+            border-radius: 50%;
+            box-shadow: 0 0 15px var(--safe-green);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); opacity: 0.7; }
+            70% { transform: scale(1.5); opacity: 0; }
+            100% { transform: scale(0.95); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <aside class="map-sidebar">
+        <h1>Sanctuary GPS</h1>
+        <p style="font-size: 0.8rem; color: #666;">Locating low-interference zones and bio-safe community assets.</p>
+
+        <div style="margin: 30px 0;">
+            <div class="legend-item"><div class="dot" style="background:var(--safe-green)"></div> Clean Zone (Low Interference)</div>
+            <div class="legend-item"><div class="dot" style="background:var(--alert-blue)"></div> AEAH Innovation Hub</div>
+            <div class="legend-item"><div class="dot" style="background:#ff2d75"></div> Bio-Safe Marketplace</div>
+        </div>
+
+        <h3 style="font-family: 'Orbitron'; font-size: 0.9rem;">Nearby Havens</h3>
+        
+        <div class="sanctuary-card">
+            <strong>Wissahickon Valley Park</strong>
+            <p style="font-size: 0.75rem; color: #888;">Natural terrain provides high-density signal dampening. Verified "Temple Recovery" zone.</p>
+        </div>
+
+        <div class="sanctuary-card">
+            <strong>Cheltenham Bio-Safe Hub</strong>
+            <p style="font-size: 0.75rem; color: #888;">Active "City-Build" site. Local mesh network is operator-controlled.</p>
+        </div>
+
+        <a href="#" class="btn-sync">SYNC HERO GEAR</a>
+    </aside>
+
+    <main class="map-view">
+        <div class="pulse-marker" style="top: 20%; left: 45%;"></div>
+        <div class="pulse-marker" style="top: 60%; left: 30%; background: var(--alert-blue); box-shadow: 0 0 15px var(--alert-blue);"></div>
+        <div class="pulse-marker" style="top: 40%; left: 70%;"></div>
+    </main>
+
+</body>
+</html>
