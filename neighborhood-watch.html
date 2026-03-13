@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neighborhood Watch | AEAH Local Defense</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --watch-orange: #ff6600;
+            --watch-bg: #050505;
+            --panel-border: #222;
+        }
+
+        body {
+            background-color: #000;
+            color: #eee;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .watch-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--watch-orange);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        .watch-header h1 { font-family: 'Orbitron'; margin: 0; letter-spacing: 2px; }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .live-feed {
+            background: var(--watch-bg);
+            border: 1px solid var(--panel-border);
+            border-radius: 15px;
+            padding: 25px;
+            height: 600px;
+            overflow-y: auto;
+        }
+
+        .report-form {
+            background: #0a0a0a;
+            border: 1px solid var(--panel-border);
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .incident-card {
+            background: #111;
+            border-left: 4px solid var(--watch-orange);
+            padding: 15px;
+            margin-bottom: 15px;
+            font-size: 0.85rem;
+        }
+
+        .severity-high { border-left-color: #ff0000; }
+        .timestamp { font-family: 'Orbitron'; font-size: 0.7rem; color: #666; }
+
+        .btn-report {
+            background: var(--watch-orange);
+            color: black;
+            border: none;
+            padding: 15px 30px;
+            width: 100%;
+            font-family: 'Orbitron';
+            font-weight: 900;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .zip-search {
+            background: #000;
+            border: 1px solid #444;
+            color: white;
+            padding: 10px;
+            font-family: 'Orbitron';
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="watch-header">
+        <h1>Local Watch Portal</h1>
+        <div style="text-align: right;">
+            <span style="font-size: 0.7rem; color: var(--watch-orange);">ACTIVE PATROLS: 14,209</span>
+        </div>
+    </header>
+
+    <div class="report-grid">
+        
+        <div class="live-feed">
+            <input type="text" class="zip-search" placeholder="FILTER BY ZIP CODE...">
+            
+            <div class="incident-card severity-high">
+                <span class="timestamp">14:22:01 // ZIP: 10012</span>
+                <p><b>Anomaly Detected:</b> Sustained 5.8GHz pulse spike at 4th & Broadway. Interference profile: "Dopamine Harvest."</p>
+                <span style="color: #ff4444; font-size: 0.7rem;">Verified by 3 Local Operators</span>
+            </div>
+
+            <div class="incident-card">
+                <span class="timestamp">13:05:44 // ZIP: 90210</span>
+                <p><b>Hardware Alert:</b> Hidden smart-beacon detected in public transit terminal. ID: NON-SOVEREIGN-X4.</p>
+                <span style="color: #00ff88; font-size: 0.7rem;">Mitigation: Local Mesh-Shield Active</span>
+            </div>
+        </div>
+
+        <div class="report-form">
+            <h3 style="font-family: 'Orbitron';">Log a Local Breach</h3>
+            <p style="font-size: 0.8rem; color: #666;">Sync your Hero Gear to auto-populate frequency data and GPS coordinates.</p>
+            
+            <label style="font-size: 0.75rem;">Threat Type:</label>
+            <select style="width: 100%; background: #111; color: white; padding: 10px; margin: 10px 0;">
+                <option>Frequency Spike (Generator Effect)</option>
+                <option>Subliminal Audio Loop</option>
+                <option>Unidentified Mesh Node</option>
+                <option>Non-Compliant Smart Device</option>
+            </select>
+
+            <textarea style="width: 100%; height: 100px; background: #111; color: white; padding: 10px; border: 1px solid #333;" placeholder="Describe the physical location and biological symptoms felt..."></textarea>
+            
+            <button class="btn-report">SUBMIT TO HERO COUNCIL</button>
+            <p style="font-size: 0.65rem; color: #444; margin-top: 15px; text-align: center;">
+                *Reports are hashed for legal evidence and sent to the nearest **Tier 3 Legal Professional** for immediate Cease & Desist review.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
