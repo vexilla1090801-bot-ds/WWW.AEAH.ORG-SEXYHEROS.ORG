@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Library | AEAH & SEXYHEROS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-pink: #ff2d75;
+            --tech-blue: #00d2ff;
+            --dark-bg: #080808;
+            --panel-bg: #151515;
+            --locked-grey: #444;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #eee;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            display: flex;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 280px;
+            height: 100vh;
+            background: #111;
+            padding: 30px;
+            border-right: 1px solid #222;
+            position: fixed;
+        }
+
+        .sidebar h2 { font-family: 'Orbitron', sans-serif; font-size: 1.2rem; color: var(--tech-blue); margin-bottom: 40px; }
+
+        .nav-item {
+            margin-bottom: 20px;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 8px;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-item:hover { background: #222; }
+        .nav-item.active { border-left: 4px solid var(--neon-pink); background: #1a1a1a; }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 280px;
+            padding: 60px;
+            width: 100%;
+        }
+
+        .resource-header { margin-bottom: 50px; }
+        .resource-header h1 { font-family: 'Orbitron'; font-size: 2.5rem; }
+
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .resource-card {
+            background: var(--panel-bg);
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid #222;
+            position: relative;
+        }
+
+        .status-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        .locked { background: var(--locked-grey); color: #888; }
+        .unlocked { background: #00ff88; color: #000; font-weight: bold; }
+
+        .card-type { color: var(--tech-blue); font-size: 0.8rem; font-weight: bold; margin-bottom: 10px; display: block; }
+        .resource-card.hero .card-type { color: var(--neon-pink); }
+
+        .resource-card h3 { margin-top: 0; margin-bottom: 15px; }
+        .resource-card p { font-size: 0.9rem; line-height: 1.5; color: #bbb; margin-bottom: 20px; }
+
+        .download-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #222;
+            border-radius: 6px;
+            text-decoration: none;
+            color: white;
+            font-size: 0.8rem;
+            border: 1px solid #333;
+        }
+
+        .download-btn:hover { background: #333; border-color: var(--tech-blue); }
+
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>AEAH ARCHIVES</h2>
+        <div class="nav-item active">Legal Shield Files</div>
+        <div class="nav-item">Medical Whitepapers</div>
+        <div class="nav-item">Cybersecurity Tools</div>
+        <div class="nav-item">SexyHeros Curriculum</div>
+        <div class="nav-item">Verification Settings</div>
+    </div>
+
+    <div class="main-content">
+        <div class="resource-header">
+            <h1>Resource Library</h1>
+            <p>Proprietary data and toolkits for verified members of the Against Electronic Abuse & Harassment Network.</p>
+        </div>
+
+        <div class="resource-grid">
+            
+            <div class="resource-card">
+                <span class="status-tag unlocked">Tier 1 Unlocked</span>
+                <span class="card-type">Legal Advocacy</span>
+                <h3>The Digital Rights Petition</h3>
+                <p>A template for contacting your local representatives regarding the update of technology harassment laws.</p>
+                <a href="#" class="download-btn">Download PDF</a>
+            </div>
+
+            <div class="resource-card hero">
+                <span class="status-tag unlocked">Tier 2 Unlocked</span>
+                <span class="card-type">Health & Wellness</span>
+                <h3>Anatomy of Dependency</h3>
+                <p>Our proprietary guide on reversing the physical effects of long-term device addiction and "New-Era Symptoms."</p>
+                <a href="#" class="download-btn">Access Video Course</a>
+            </div>
+
+            <div class="resource-card">
+                <span class="status-tag locked">Tier 3 Required</span>
+                <span class="card-type">Medical Professional</span>
+                <h3>Clinician's Diagnostic Kit</h3>
+                <p>Proprietary methodology for identifying electronic interference symptoms in a clinical environment.</p>
+                <a href="#" class="download-btn">Locked</a>
+            </div>
+
+            <div class="resource-card hero">
+                <span class="status-tag locked">Tier 4 Required</span>
+                <span class="card-type">Sovereign Elite</span>
+                <h3>The SexyHeros Influence Pack</h3>
+                <p>Exclusive media assets and production guidelines for creating ethical, verified "Hero" content.</p>
+                <a href="#" class="download-btn">Locked</a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
