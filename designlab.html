@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next-Wave Design Lab | AEAH Innovation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-pink: #ff2d75;
+            --tech-blue: #00d2ff;
+            --lab-purple: #6a0dad;
+            --dark-bg: #050505;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .lab-hero {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('community-tech.jpg');
+            border-bottom: 3px solid var(--lab-purple);
+        }
+
+        .lab-hero h1 { font-family: 'Orbitron'; font-size: 2.5rem; color: var(--tech-blue); }
+
+        .concept-grid {
+            max-width: 1200px;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .concept-card {
+            background: #111;
+            border-radius: 20px;
+            border: 1px solid #222;
+            padding: 30px;
+            position: relative;
+        }
+
+        .concept-card h3 { font-family: 'Orbitron'; color: var(--neon-pink); margin-bottom: 15px; }
+
+        .tag {
+            font-size: 0.7rem;
+            background: var(--lab-purple);
+            padding: 4px 10px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .innovation-box {
+            background: rgba(0, 210, 255, 0.05);
+            border: 1px dashed var(--tech-blue);
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+        }
+
+        .btn-brainstorm {
+            display: block;
+            width: fit-content;
+            margin: 40px auto;
+            padding: 15px 40px;
+            background: var(--tech-blue);
+            color: black;
+            font-family: 'Orbitron';
+            font-weight: 900;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn-brainstorm:hover { background: white; transform: scale(1.05); }
+
+    </style>
+</head>
+<body>
+
+    <section class="lab-hero">
+        <h1>The Next-Wave Design Lab</h1>
+        <p>Turning the "Generator in the Snow" into a source of community heat and growth.</p>
+    </section>
+
+    <div class="concept-grid">
+        
+        <div class="concept-card">
+            <span class="tag">Urban Concept</span>
+            <h3>The Bio-Balanced City Grid</h3>
+            <p>Our answer to "Smart Cities." We design concepts for urban grids that prioritize human nervous system health over data-harvesting efficiency.</p>
+            <div class="innovation-box">
+                <strong>Innovation:</strong> Frequency-damping architecture that allows connectivity without "The Generator Effect" on local biology.
+            </div>
+        </div>
+
+        <div class="concept-card">
+            <span class="tag">Youth Initiative</span>
+            <h3>Kid-Built Tech Frameworks</h3>
+            <p>Instead of kids being used by apps, we teach them to build the "New Skin." Workshops that allow local youth to innovate devices for their specific neighborhood needs.</p>
+            <div class="innovation-box">
+                <strong>Innovation:</strong> Open-source hardware kits that are "Human-Centric" by design.
+            </div>
+        </div>
+
+        <div class="concept-card">
+            <span class="tag">Biological Sync</span>
+            <h3>Biotech Food Scanners</h3>
+            <p>A community tool designed to scan for "Infections" in the food supply—identifying where biotechnology in our food is being used as a weapon rather than fuel.</p>
+            <div class="innovation-box">
+                <strong>Innovation:</strong> A mobile app that identifies the "Digital Signature" of bio-engineered food.
+            </div>
+        </div>
+
+    </div>
+
+    <div style="text-align: center; padding: 40px;">
+        <h2>Ready to Innovate over the Scars?</h2>
+        <p>We are currently seeking grants to launch "Next-Wave Hubs" in 10 major cities.</p>
+        <a href="#" class="btn-brainstorm">Propose a Concept</a>
+    </div>
+
+</body>
+</html>
