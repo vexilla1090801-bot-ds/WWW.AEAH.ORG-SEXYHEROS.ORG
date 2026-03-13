@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero News & Press | AEAH & SEXYHEROS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --hero-pink: #ff2d75;
+            --tech-blue: #00d2ff;
+            --dark-bg: #050505;
+            --news-card: #111;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .news-header {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('news-background.jpg');
+            border-bottom: 2px solid var(--tech-blue);
+        }
+
+        .news-header h1 { font-family: 'Orbitron'; font-size: 2.5rem; letter-spacing: 2px; }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 40px;
+        }
+
+        /* Featured Article */
+        .featured-article {
+            background: var(--news-card);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #222;
+            margin-bottom: 40px;
+        }
+
+        .featured-img { width: 100%; height: 400px; background: #1a1a1a; display: flex; align-items: center; justify-content: center; }
+
+        .article-content { padding: 40px; }
+        .tag { font-family: 'Orbitron'; font-size: 0.7rem; padding: 5px 10px; border-radius: 4px; margin-bottom: 15px; display: inline-block; }
+        .tag-blue { background: var(--tech-blue); color: black; }
+        .tag-pink { background: var(--hero-pink); color: white; }
+
+        .article-title { font-family: 'Orbitron'; font-size: 1.8rem; margin-bottom: 20px; line-height: 1.2; }
+
+        /* News List */
+        .news-list { display: flex; flex-direction: column; gap: 20px; }
+        .news-item { background: #111; padding: 20px; border-radius: 10px; border-left: 4px solid #333; display: flex; gap: 20px; }
+        .news-item:hover { border-left-color: var(--hero-pink); }
+        .item-text h4 { margin: 0 0 10px; font-size: 1.1rem; }
+
+        /* Sidebar: Press Kit */
+        .press-kit { background: #1a1a1a; padding: 30px; border-radius: 15px; text-align: center; }
+        .btn-press { display: block; padding: 10px; background: var(--tech-blue); color: black; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 15px; }
+
+    </style>
+</head>
+<body>
+
+    <header class="news-header">
+        <h1>THE <span style="color:var(--hero-pink)">HERO</span> GAZETTE</h1>
+        <p>Documenting the front lines of the Technological-Human Rights Movement.</p>
+    </header>
+
+    <div class="container">
+        
+        <main>
+            <div class="featured-article">
+                <div class="featured-img">[ Breakthrough: Frequency Harassment Injunction ]</div>
+                <div class="article-content">
+                    <span class="tag tag-blue">Legal Victory</span>
+                    <h2 class="article-title">New York Court Recognizes "Digital Trespass" of Body-Frequency</h2>
+                    <p>In a landmark 15-page ruling, a verified Tier 3 Practitioner successfully argued that unauthorized electronic signals constitute a violation of bodily sovereignty...</p>
+                    <a href="#" style="color:var(--tech-blue);">Read Full Analysis →</a>
+                </div>
+            </div>
+
+            <div class="news-list">
+                <div class="news-item">
+                    <div class="item-text">
+                        <span class="tag tag-pink">SexyHeros Update</span>
+                        <h4>The "Reclaiming Goodness" Pilot Reaches 1M Creators</h4>
+                        <p>Our women-led initiative has successfully reduced digital addiction symptoms in 85% of pilot participants.</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="item-text">
+                        <span class="tag tag-blue">Medical Science</span>
+                        <h4>New Data: The "Test-Subject" Effect in Urban Centers</h4>
+                        <p>Proprietary research shows a correlation between high-density tech grids and nervous system overstimulation.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <aside>
+            <div class="press-kit">
+                <h3>Press Resources</h3>
+                <p style="font-size: 0.8rem; color: #888;">For journalists seeking verified data on electronic abuse.</p>
+                <a href="#" class="btn-press">Download Media Kit</a>
+                <p style="font-size: 0.7rem; margin-top: 10px;">Verification Tier 3 Required for Full Archives.</p>
+            </div>
+        </aside>
+
+    </div>
+
+</body>
+</html>
