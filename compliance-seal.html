@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compliance Seal | AEAH Verification</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --seal-gold: #c5a059;
+            --seal-white: #f8f9fa;
+            --dark-bg: #000000;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #888;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cert-container {
+            max-width: 800px;
+            background: #0a0a0a;
+            border: 2px solid var(--seal-gold);
+            padding: 60px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 0 50px rgba(197, 160, 89, 0.1);
+            margin-bottom: 40px;
+        }
+
+        /* Decorative Corners */
+        .cert-container::before, .cert-container::after {
+            content: '';
+            position: absolute;
+            width: 30px; height: 30px;
+            border: 2px solid var(--seal-gold);
+        }
+        .cert-container::before { top: 10px; left: 10px; border-right: none; border-bottom: none; }
+        .cert-container::after { bottom: 10px; right: 10px; border-left: none; border-top: none; }
+
+        .seal-header h1 { 
+            font-family: 'Orbitron'; 
+            color: var(--seal-white); 
+            letter-spacing: 5px; 
+            margin-bottom: 5px;
+        }
+
+        .cert-id { font-family: 'Courier New', monospace; font-size: 0.8rem; color: var(--seal-gold); }
+
+        .cert-body { margin: 40px 0; color: #ccc; line-height: 1.8; }
+        .cert-body b { color: var(--seal-white); }
+
+        .dynamic-qr {
+            width: 120px;
+            height: 120px;
+            background: white;
+            margin: 0 auto 20px;
+            padding: 10px;
+            border: 3px solid var(--seal-gold);
+        }
+
+        .verification-portal {
+            width: 100%;
+            max-width: 800px;
+            background: #111;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        input {
+            flex-grow: 1;
+            background: #000;
+            border: 1px solid #333;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .btn-verify {
+            background: var(--seal-gold);
+            color: black;
+            border: none;
+            padding: 0 30px;
+            font-family: 'Orbitron';
+            font-weight: 900;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cert-container">
+        <div class="seal-header">
+            <h1>SOVEREIGNTY SEAL</h1>
+            <div class="cert-id">CERTIFICATE NO: AE-2026-X88</div>
+        </div>
+
+        <div class="cert-body">
+            This is to certify that <b>[ENTITY NAME]</b> has undergone a full <b>AEAH Bio-Ethics Audit</b>. 
+            All digital interactions, biological products, and signal emissions have been verified as 
+            <b>Non-Predatory</b> and compliant with the <b>28th Amendment (P11)</b> and the 
+            <b>Sovereign Ethics Code (P24)</b>.
+        </div>
+
+        <div class="dynamic-qr">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=AEAH-VERIFIED-X88" alt="Verification QR">
+        </div>
+        <p style="font-size: 0.7rem; font-family: 'Orbitron';">SCAN TO VERIFY LIVE STATUS</p>
+    </div>
+
+    <div class="verification-portal">
+        <h3 style="font-family: 'Orbitron'; color: white; margin-top: 0;">Verification Search</h3>
+        <p style="font-size: 0.8rem;">Enter a Case ID or URL to check for Sovereign Compliance.</p>
+        <div class="input-group">
+            <input type="text" placeholder="Enter Entity Name or Cert ID...">
+            <button class="btn-verify">SEARCH</button>
+        </div>
+    </div>
+
+</body>
+</html>
