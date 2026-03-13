@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City-Build Blueprint | AEAH Innovation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --build-green: #00ff88;
+            --tech-blue: #00d2ff;
+            --dark-bg: #050505;
+            --grid-line: #1a1a1a;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            background-image: 
+                linear-gradient(var(--grid-line) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+            background-size: 40px 40px;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .blueprint-header {
+            padding: 80px 20px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.85);
+            border-bottom: 2px solid var(--build-green);
+        }
+
+        .blueprint-header h1 { font-family: 'Orbitron'; font-size: 2.5rem; color: var(--build-green); }
+
+        .blueprint-container {
+            max-width: 1100px;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            padding: 20px;
+        }
+
+        .step-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .step-card {
+            background: #111;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #222;
+        }
+
+        .step-num { 
+            font-family: 'Orbitron'; 
+            color: var(--build-green); 
+            font-size: 1.2rem; 
+            margin-right: 10px; 
+        }
+
+        .main-blueprint {
+            background: rgba(0, 255, 136, 0.02);
+            padding: 40px;
+            border: 1px solid #222;
+            border-radius: 20px;
+        }
+
+        .concept-art {
+            width: 100%;
+            height: 300px;
+            background: #000;
+            border: 1px dashed var(--build-green);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #444;
+            font-family: 'Orbitron';
+        }
+
+        .innovation-item {
+            margin-bottom: 30px;
+            padding-left: 20px;
+            border-left: 3px solid var(--tech-blue);
+        }
+
+        .btn-download {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: var(--build-green);
+            color: black;
+            font-family: 'Orbitron';
+            font-weight: 900;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <section class="blueprint-header">
+        <h1>Neighborhood Innovation Hubs</h1>
+        <p>A "City-Build" template for reclaiming technology at the block level.</p>
+    </section>
+
+    <div class="blueprint-container">
+        
+        <aside class="step-sidebar">
+            <div class="step-card">
+                <span class="step-num">01</span>
+                <strong>Council Selection</strong>
+                <p style="font-size: 0.8rem; color: #888;">Select 4 local leaders (The Neighborhood Council) to oversee the Hub.</p>
+            </div>
+            <div class="step-card">
+                <span class="step-num">02</span>
+                <strong>The Pulse Check</strong>
+                <p style="font-size: 0.8rem; color: #888;">Identify local "Generator Effects"—where is the tech hurting the kids or the food?</p>
+            </div>
+            <div class="step-card">
+                <span class="step-num">03</span>
+                <strong>Design & Build</strong>
+                <p style="font-size: 0.8rem; color: #888;">Using AEAH open-source kits to innovate local safety devices.</p>
+            </div>
+        </aside>
+
+        <main class="main-blueprint">
+            <div class="concept-art"> [ SCHEMATIC: BIO-BALANCED COMMUNITY CENTER ] </div>
+            
+            <div class="innovation-item">
+                <h3>The Sovereign WiFi Mesh</h3>
+                <p>Instead of relying on corporate grids that harvest data and pulse frequencies, neighborhoods build their own encrypted mesh. It is "Operator-Controlled" and shuts off during rest hours to allow the biological temple to heal.</p>
+            </div>
+
+            <div class="innovation-item">
+                <h3>Bio-Tech Food Pantries</h3>
+                <p>Integration of our "Food Scanners" (from P12) into local centers. Kids are trained to monitor the biotechnology of the neighborhood's intake, ensuring fuel is not being used as a weapon.</p>
+            </div>
+
+            <div class="innovation-item">
+                <h3>The Neutrality Zone</h3>
+                <p>Architectural concepts for "dead-zones" in parks and centers where technology is physically inhibited, allowing for pure human-to-human evolution and critical thinking.</p>
+            </div>
+
+            <a href="#" class="btn-download">Download Full Hub Manual</a>
+        </main>
+
+    </div>
+
+</body>
+</html>
