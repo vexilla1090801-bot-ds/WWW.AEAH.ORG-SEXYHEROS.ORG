@@ -3,158 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AEAH.ORG | SEXYHEROS.ORG - Defending Human Dignity</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <title>AEAH | SEXYHEROS Unified Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
+        /* CORE STYLE PRESERVATION */
         :root {
-            --aeah-blue: #004e92;
-            --aeah-silver: #c0c0c0;
-            --sexy-pink: #ff2d75;
-            --dark-bg: #0a0a0a;
-            --white: #ffffff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            --hero-blue: #00d2ff;
+            --hero-pink: #ff2d75;
+            --dark-bg: #050505;
+            --glass: rgba(255, 255, 255, 0.03);
         }
 
         body, html {
-            height: 100%;
-            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
             background-color: var(--dark-bg);
-            color: var(--white);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            height: 100vh;
+        }
+
+        /* BACKGROUND DETAIL ENHANCEMENT */
+        .grid-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: 
+                linear-gradient(var(--hero-blue) 1px, transparent 1px),
+                linear-gradient(90deg, var(--hero-blue) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .portal-container {
+            display: flex;
+            height: 100vh;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* SIDE PANEL REFINEMENT */
+        .side {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            text-decoration: none;
             overflow: hidden;
         }
 
-        .container {
-            display: flex;
-            height: 100vh;
-            width: 100vw;
-            flex-direction: row;
-        }
+        .side:hover { flex: 1.2; }
 
-        /* Split Screen Styles */
-        .split {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            padding: 5%;
-            transition: all 0.5s ease;
-            position: relative;
-            text-align: center;
+        /* LEFT SIDE: THE SUBJECT (RECOVERY) */
+        .left-side {
+            border-right: 1px solid rgba(0, 210, 255, 0.2);
+            background: linear-gradient(to right, #000, rgba(0, 210, 255, 0.05));
         }
+        .left-side:hover { background: rgba(0, 210, 255, 0.1); }
 
-        /* Left Side: AEAH */
-        .aeah {
-            background: linear-gradient(135deg, #000428 0%, #004e92 100%);
-            border-right: 2px solid rgba(255,255,255,0.1);
+        /* RIGHT SIDE: THE OPERATOR (HERO) */
+        .right-side {
+            background: linear-gradient(to left, #000, rgba(255, 45, 117, 0.05));
         }
+        .right-side:hover { background: rgba(255, 45, 117, 0.1); }
 
-        /* Right Side: SEXYHEROS */
-        .sexyheros {
-            background: linear-gradient(135deg, #0a0a0a 0%, #2d0a1a 100%);
-        }
-
-        .logo {
-            max-width: 280px;
-            margin-bottom: 20px;
-            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            font-weight: 900;
-            margin-bottom: 15px;
+        /* TEXT DETAIL */
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            letter-spacing: 5px;
             text-transform: uppercase;
+        }
+
+        .left-side h1 { color: var(--hero-blue); text-shadow: 0 0 20px var(--hero-blue); }
+        .right-side h1 { color: var(--hero-pink); text-shadow: 0 0 20px var(--hero-pink); }
+
+        .subtitle {
+            font-size: 0.9rem;
+            font-weight: 300;
             letter-spacing: 2px;
-        }
-
-        p {
-            font-size: 1.1rem;
+            color: #aaa;
             max-width: 400px;
+            text-align: center;
             line-height: 1.6;
-            margin-bottom: 30px;
-            opacity: 0.9;
         }
 
-        .btn {
+        /* MASTER NAVIGATION BUTTONS */
+        .portal-nav {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .nav-btn {
+            padding: 15px 25px;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: var(--glass);
+            color: #fff;
             text-decoration: none;
-            padding: 15px 40px;
-            border-radius: 50px;
-            font-weight: bold;
-            text-transform: uppercase;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-family: 'Orbitron';
+            font-size: 0.75rem;
+            text-align: center;
+            transition: 0.3s;
+            backdrop-filter: blur(5px);
         }
 
-        .btn-blue {
-            background-color: var(--white);
-            color: var(--aeah-blue);
-        }
+        .left-side .nav-btn:hover { border-color: var(--hero-blue); background: rgba(0, 210, 255, 0.2); }
+        .right-side .nav-btn:hover { border-color: var(--hero-pink); background: rgba(255, 45, 117, 0.2); }
 
-        .btn-pink {
-            background-color: var(--sexy-pink);
-            color: var(--white);
-            box-shadow: 0 0 20px rgba(255, 45, 117, 0.4);
-        }
-
-        .btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
-        }
-
-        /* Middle Divider Decor */
-        .divider {
+        /* CENTER BRANDING */
+        .center-logo {
             position: absolute;
-            left: 50%;
-            top: 50%;
+            top: 50%; left: 50%;
             transform: translate(-50%, -50%);
             z-index: 10;
-            background: var(--white);
-            color: #000;
-            padding: 10px;
-            border-radius: 50%;
-            font-weight: bold;
-            font-size: 0.8rem;
+            text-align: center;
+            pointer-events: none;
         }
 
-        /* Mobile Optimization */
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-            .split {
-                height: 50vh;
-            }
-            h2 { font-size: 1.8rem; }
-            .logo { max-width: 180px; }
-            .divider { display: none; }
+        .center-logo img { width: 120px; filter: drop-shadow(0 0 15px white); }
+
+        /* BOTTOM UTILITY NAV */
+        .utility-bar {
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            font-size: 0.7rem;
+            font-family: 'Orbitron';
+            color: #444;
+            z-index: 5;
         }
+
+        .utility-bar a { color: #666; text-decoration: none; transition: 0.3s; }
+        .utility-bar a:hover { color: white; }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="divider">VS</div>
+    <div class="grid-overlay"></div>
 
-        <section class="split aeah">
-            <img src="Sexyheros.org.png" alt="Sexyheros.org.png" class="logo">
-            <h2>The Shield</h2>
-            <p>Against Electronic Abuse & Harassment. Legal advocacy, medical research, and cybersecurity for the modern victim.</p>
-            <a href="#aeah-portal" class="btn btn-blue">Enter Defense</a>
-        </section>
-
-        <section class="split sexyheros">
-            <img src="Sexyheros.org.png" alt="Sexyheros.org.png" class="logo">
-            <h2>The Mission</h2>
-            <p>Reclaiming Goodness. A women-led program tackling tech addiction and device dependency. Turning "test subjects" into heroes.</p>
-            <a href="#sexy-portal" class="btn btn-pink">Enter Recovery</a>
-        </section>
+    <div class="center-logo">
+        <h2 style="font-family: 'Orbitron'; letter-spacing: 10px; margin: 0;">AEAH</h2>
+        <div style="height: 1px; width: 150px; background: white; margin: 10px auto;"></div>
+        <p style="font-size: 0.6rem; letter-spacing: 3px;">SEXYHEROS UNIFIED</p>
     </div>
+
+    <div class="portal-container">
+        
+        <a href="intake.html" class="side left-side">
+            <h1>Subject</h1>
+            <p class="subtitle">Detection, Reporting, and Biological Stabilization for victims of technological battery.</p>
+            
+            <div class="portal-nav">
+                <div class="nav-btn">P04 // Intake & Reporting</div>
+                <div class="nav-btn">P12 // Bio-Tech Scanner</div>
+                <div class="nav-btn">P29 // Sanctuary Map</div>
+                <div class="nav-btn">P43 // Bio-Calibration</div>
+            </div>
+        </a>
+
+        <a href="hero-council.html" class="side right-side">
+            <h1>Operator</h1>
+            <p class="subtitle">Legal, Technical, and Strategic leadership in the movement to reclaim human sovereignty.</p>
+            
+            <div class="portal-nav">
+                <div class="nav-btn">P08 // Hero Council</div>
+                <div class="nav-btn">P14 // Legal Bell-Ringer</div>
+                <div class="nav-btn">P22 // City-Build Blueprint</div>
+                <div class="nav-btn">P39 // Ethics Auditor Board</div>
+            </div>
+        </a>
+
+    </div>
+
+    <nav class="utility-bar">
+        <a href="master-index.html">P31 // MASTER SYSTEM INDEX</a>
+        <a href="ledger.html">P35 // ACCOUNTABILITY LEDGER</a>
+        <a href="horizon.html">P40 // CENTENNIAL VISION</a>
+        <a href="neighborhood-watch.html">P45 // LOCAL WATCH</a>
+    </nav>
 
 </body>
 </html>
-
