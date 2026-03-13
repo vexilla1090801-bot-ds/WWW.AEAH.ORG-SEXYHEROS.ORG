@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sovereign Vault | AEAH.ORG</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --vault-gold: #d4af37;
+            --vault-silver: #c0c0c0;
+            --dark-bg: #050505;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #ccc;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .vault-header {
+            padding: 100px 20px;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('library-columns.jpg');
+            border-bottom: 1px solid var(--vault-gold);
+        }
+
+        .vault-header h1 { font-family: 'Orbitron'; font-size: 2.5rem; color: var(--vault-gold); letter-spacing: 3px; }
+
+        .search-bar {
+            max-width: 600px;
+            margin: -30px auto 50px;
+            display: flex;
+        }
+
+        .search-bar input {
+            flex-grow: 1;
+            padding: 20px;
+            background: #111;
+            border: 1px solid var(--vault-gold);
+            color: white;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .search-bar button {
+            padding: 0 30px;
+            background: var(--vault-gold);
+            border: none;
+            font-family: 'Orbitron';
+            font-weight: 900;
+            cursor: pointer;
+        }
+
+        .vault-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto 100px;
+            padding: 0 20px;
+        }
+
+        .vault-category {
+            background: #0a0a0a;
+            border: 1px solid #222;
+            padding: 40px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .vault-category:hover { border-color: var(--vault-gold); }
+
+        .vault-category h3 { font-family: 'Orbitron'; color: var(--vault-gold); margin-bottom: 20px; }
+
+        .file-list { list-style: none; padding: 0; }
+        .file-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #222;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+        }
+
+        .file-list li a { color: var(--vault-silver); text-decoration: none; }
+        .file-list li a:hover { color: white; }
+
+        .format-tag { font-size: 0.7rem; color: #555; text-transform: uppercase; }
+
+        .license-notice {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.8rem;
+            color: #444;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="vault-header">
+        <h1>THE SOVEREIGN VAULT</h1>
+        <p>Open-Source Blueprints for the Evolution of the American Temple.</p>
+    </section>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Search for Blueprints, Legal Templates, or Medical Whitepapers...">
+        <button>ACCESS</button>
+    </div>
+
+    <div class="vault-grid">
+        
+        <div class="vault-category">
+            <h3>Legal Templates</h3>
+            <ul class="file-list">
+                <li><a href="#">28th Amendment Draft (Model Legislation)</a> <span class="format-tag">.PDF</span></li>
+                <li><a href="#">Cease & Desist: Neural Trespass</a> <span class="format-tag">.DOCX</span></li>
+                <li><a href="#">Petition for Bio-Metric Sovereignty</a> <span class="format-tag">.PDF</span></li>
+            </ul>
+        </div>
+
+        <div class="vault-category">
+            <h3>Medical Whitepapers</h3>
+            <ul class="file-list">
+                <li><a href="#">The Generator Effect: Clinical Study 2026</a> <span class="format-tag">.PDF</span></li>
+                <li><a href="#">Detoxing the Nervous System Protocol</a> <span class="format-tag">.PDF</span></li>
+                <li><a href="#">Bio-Frequency Sensitivity Markers</a> <span class="format-tag">.XLSX</span></li>
+            </ul>
+        </div>
+
+        <div class="vault-category">
+            <h3>Technical Blueprints</h3>
+            <ul class="file-list">
+                <li><a href="#">Sovereign Mesh-Node (V1.0) Schematic</a> <span class="format-tag">.CAD</span></li>
+                <li><a href="#">DIY Bio-Balanced Router Shield</a> <span class="format-tag">.STL</span></li>
+                <li><a href="#">Food-Biotech Scanner Logic (Open Code)</a> <span class="format-tag">.JSON</span></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="license-notice">
+        <p>All assets in the Sovereign Vault are released under the <b>Humanity-First License</b>. They are free to use, modify, and distribute for the purpose of community protection and biological healing. Commercial exploitation of these assets for the purpose of human manipulation is strictly prohibited by Sovereign Identity Law.</p>
+    </div>
+
+</body>
+</html>
