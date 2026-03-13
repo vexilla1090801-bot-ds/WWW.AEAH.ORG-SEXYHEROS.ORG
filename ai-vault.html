@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence Vault | AEAH Sovereign</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --vault-red: #ff3e3e;
+            --vault-steel: #b0c4de;
+            --dark-bg: #030303;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--vault-steel);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .vault-header {
+            border-bottom: 2px solid var(--vault-red);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .vault-header h1 { font-family: 'Orbitron'; color: white; margin: 0; }
+
+        .upload-zone {
+            border: 2px dashed #333;
+            border-radius: 20px;
+            padding: 60px;
+            text-align: center;
+            background: #0a0a0a;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .upload-zone:hover { border-color: var(--vault-red); background: #111; }
+
+        .evidence-list {
+            margin-top: 50px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .evidence-list th {
+            text-align: left;
+            font-family: 'Orbitron';
+            font-size: 0.7rem;
+            color: var(--vault-red);
+            padding: 15px;
+            border-bottom: 1px solid #222;
+        }
+
+        .evidence-list td {
+            padding: 15px;
+            border-bottom: 1px solid #111;
+            font-size: 0.85rem;
+        }
+
+        .status-verified {
+            color: #00ff88;
+            font-family: 'Orbitron';
+            font-size: 0.7rem;
+        }
+
+        .hash-tag {
+            font-family: 'Courier New', monospace;
+            font-size: 0.7rem;
+            color: #555;
+        }
+
+        .btn-action {
+            background: var(--vault-red);
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-family: 'Orbitron';
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="vault-header">
+        <h1>AI Evidence Locker</h1>
+        <div style="text-align: right;">
+            <span style="display:block; font-size: 0.7rem; color: #666;">ENCRYPTION: AES-256</span>
+            <span style="display:block; font-size: 0.7rem; color: #666;">STORAGE: DECENTRALIZED</span>
+        </div>
+    </header>
+
+    <div class="upload-zone">
+        <p style="font-family: 'Orbitron'; font-size: 1.1rem; color: white;">Drag & Drop AI Transcripts or Logs</p>
+        <p style="font-size: 0.8rem; color: #666;">Accepted formats: .JSON, .TXT, .CSV, .HAR</p>
+    </div>
+
+    
+
+    <table class="evidence-list">
+        <thead>
+            <tr>
+                <th>Case ID</th>
+                <th>Type of Violation</th>
+                <th>Chain of Custody</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>#AE-772-A</td>
+                <td>Neural Trespass (Implicit)</td>
+                <td class="hash-tag">0x8f2d...e4a1</td>
+                <td class="status-verified">VERIFIED & HASHED</td>
+                <td><a href="#" class="btn-action">EXPORT TO LEGAL</a></td>
+            </tr>
+            <tr>
+                <td>#AE-772-B</td>
+                <td>Dopamine Loop Induction</td>
+                <td class="hash-tag">0x3c11...b99f</td>
+                <td class="status-verified">VERIFIED & HASHED</td>
+                <td><a href="#" class="btn-action">EXPORT TO LEGAL</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
