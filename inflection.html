@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inflection Point Registry | AEAH & SEXYHEROS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-pink: #ff2d75;
+            --tech-blue: #00d2ff;
+            --honor-gold: #d4af37;
+            --dark-bg: #030303;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .registry-hero {
+            padding: 100px 20px;
+            text-align: center;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #030303 100%);
+            border-bottom: 2px solid var(--honor-gold);
+        }
+
+        .registry-hero h1 { font-family: 'Orbitron'; font-size: 2.8rem; color: var(--honor-gold); margin-bottom: 20px; }
+
+        .counter-strip {
+            background: #111;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            border-bottom: 1px solid #222;
+        }
+
+        .counter-item { text-align: center; }
+        .counter-num { display: block; font-family: 'Orbitron'; font-size: 2rem; color: var(--tech-blue); }
+        .counter-label { font-size: 0.7rem; text-transform: uppercase; color: #666; letter-spacing: 1px; }
+
+        .registry-grid {
+            max-width: 1200px;
+            margin: 60px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 20px;
+        }
+
+        .pro-card {
+            background: #0a0a0a;
+            border: 1px solid #222;
+            padding: 25px;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pro-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 4px;
+            background: var(--honor-gold);
+        }
+
+        .pro-name { font-family: 'Orbitron'; font-size: 1.1rem; margin-bottom: 5px; display: block; }
+        .pro-title { color: var(--tech-blue); font-size: 0.8rem; text-transform: uppercase; margin-bottom: 15px; display: block; }
+        .pro-impact { font-size: 0.85rem; color: #aaa; font-style: italic; }
+
+        .badge-verified {
+            float: right;
+            width: 40px;
+            height: 40px;
+            background: url('sovereign-seal.png') no-repeat center/contain;
+        }
+
+        .cta-section {
+            background: #000;
+            padding: 80px 20px;
+            text-align: center;
+            border-top: 1px solid #222;
+        }
+
+        .btn-evolve {
+            padding: 20px 50px;
+            background: transparent;
+            border: 2px solid var(--honor-gold);
+            color: var(--honor-gold);
+            font-family: 'Orbitron';
+            font-weight: 900;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn-evolve:hover { background: var(--honor-gold); color: black; }
+    </style>
+</head>
+<body>
+
+    <section class="registry-hero">
+        <h1>The Inflection Point</h1>
+        <p>A public record of Medical & Legal Leaders who have adapted to the Technological-Human Era.</p>
+    </section>
+
+    <div class="counter-strip">
+        <div class="counter-item">
+            <span class="counter-num">142</span>
+            <span class="counter-label">Medical Practitioners</span>
+        </div>
+        <div class="counter-item">
+            <span class="counter-num">89</span>
+            <span class="counter-label">Legal Professionals</span>
+        </div>
+        <div class="counter-item">
+            <span class="counter-num">12</span>
+            <span class="counter-label">Legislative Partners</span>
+        </div>
+    </div>
+
+    <div class="registry-grid">
+        <div class="pro-card">
+            <div class="badge-verified"></div>
+            <span class="pro-name">Dr. Aris Thorne</span>
+            <span class="pro-title">Neurological Consultant | NY</span>
+            <p class="pro-impact">"The first practitioner to officially recognize 'Neural Trespass' in clinical patient intake."</p>
+        </div>
+
+        <div class="pro-card">
+            <div class="badge-verified"></div>
+            <span class="pro-name">Sarah J. Miller, Esq.</span>
+            <span class="pro-title">Constitutional Law | CA</span>
+            <p class="pro-impact">"Lead architect of the 28th Amendment drafting committee."</p>
+        </div>
+
+        <div class="pro-card">
+            <div class="badge-verified"></div>
+            <span class="pro-name">Marcus Vane</span>
+            <span class="pro-title">IT Security Architect | TX</span>
+            <p class="pro-impact">"Innovator of the first Bio-Balanced local neighborhood grid concept."</p>
+        </div>
+    </div>
+
+    <section class="cta-section">
+        <h2>Are you a leader, or a relic?</h2>
+        <p style="margin-bottom: 40px; color: #666;">Apply for Tier 3 Certification and move from ignorance to evolution.</p>
+        <a href="#" class="btn-evolve">Register Your Inflection</a>
+    </section>
+
+</body>
+</html>
