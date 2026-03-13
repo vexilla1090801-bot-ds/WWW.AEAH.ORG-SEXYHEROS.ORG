@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sovereign Support | AEAH & SEXYHEROS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-pink: #ff2d75;
+            --tech-blue: #00d2ff;
+            --dark-bg: #050505;
+            --gold: #d4af37;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero-banner {
+            padding: 100px 20px;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('crowd-connection.jpg');
+            background-size: cover;
+            border-bottom: 3px solid var(--neon-pink);
+        }
+
+        .hero-banner h1 { font-family: 'Orbitron'; font-size: 3rem; margin-bottom: 20px; }
+
+        .funding-grid {
+            max-width: 1200px;
+            margin: -50px auto 60px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .action-card {
+            background: #111;
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid #222;
+            transition: 0.3s;
+        }
+
+        .action-card:hover { border-color: var(--tech-blue); transform: translateY(-5px); }
+
+        .fund-goal {
+            height: 10px;
+            background: #222;
+            border-radius: 5px;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .progress-bar {
+            height: 100%;
+            border-radius: 5px;
+            background: linear-gradient(to right, var(--tech-blue), var(--neon-pink));
+        }
+
+        .tier-lock-icon { font-size: 0.7rem; color: var(--gold); text-transform: uppercase; margin-bottom: 10px; display: block; }
+
+        .btn-donate {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .btn-donate:hover { background: white; color: black; }
+
+        .legal-footer {
+            padding: 60px 20px;
+            background: #000;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero-banner">
+        <h1>Fund the Future of <span style="color:var(--tech-blue)">Humanity</span></h1>
+        <p>Support the legal, medical, and cultural defense against technology misuse.</p>
+    </section>
+
+    <div class="funding-grid">
+        
+        <div class="action-card">
+            <span class="tier-lock-icon">Proprietary Legal Action</span>
+            <h3>The Legislative Catch-Up Fund</h3>
+            <p>Directly funding the legal team drafting the "Electronic Harassment & Frequency Protection Act."</p>
+            <div class="fund-goal">
+                <div class="progress-bar" style="width: 65%;"></div>
+            </div>
+            <p style="font-size: 0.8rem;">$65,000 / $100,000 Raised</p>
+            <a href="#" class="btn-donate">Support Legal Battle</a>
+        </div>
+
+        <div class="action-card">
+            <span class="tier-lock-icon">Medical Transparency</span>
+            <h3>Anatomy Awareness Grants</h3>
+            <p>Providing grants to Tier 3 Doctors to study the physiological effects of long-term device dependency.</p>
+            <div class="fund-goal">
+                <div class="progress-bar" style="width: 40%;"></div>
+            </div>
+            <p style="font-size: 0.8rem;">$40,000 / $100,000 Raised</p>
+            <a href="#" class="btn-donate">Support Medical Science</a>
+        </div>
+
+        <div class="action-card" style="border-bottom: 5px solid var(--neon-pink);">
+            <span class="tier-lock-icon" style="color:var(--neon-pink)">Influence & Recovery</span>
+            <h3>The Reclaiming Goodness Tour</h3>
+            <p>Funding local workshops for creators in the entertainment industry to combat tech-addiction and exploitation.</p>
+            <div class="fund-goal">
+                <div class="progress-bar" style="width: 82%;"></div>
+            </div>
+            <p style="font-size: 0.8rem;">$82,000 / $100,000 Raised</p>
+            <a href="#" class="btn-donate" style="border-color:var(--neon-pink); color:var(--neon-pink)">Support the Heros</a>
+        </div>
+
+    </div>
+
+    <footer class="legal-footer">
+        <p>Against Electronic Abuse and Harassment (AEAH) is a registered 501(c)(3) nonprofit organization.</p>
+        <p>New York State Registration ID: 6531341 | All donations are tax-deductible.</p>
+        <p>© 2026 AEAH.ORG | SEXYHEROS.ORG | All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
