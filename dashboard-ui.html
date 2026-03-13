@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Dashboard | AEAH Sovereign</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --hero-pink: #ff2d75;
+            --tech-blue: #00d2ff;
+            --safety-green: #00ff88;
+            --dark-bg: #080808;
+            --card-bg: #121212;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+        }
+
+        /* SIDE NAV */
+        nav {
+            width: 260px;
+            background: #000;
+            border-right: 1px solid #222;
+            display: flex;
+            flex-direction: column;
+            padding: 30px 20px;
+        }
+
+        .nav-logo { font-family: 'Orbitron'; color: var(--hero-pink); font-size: 1.2rem; margin-bottom: 50px; }
+        .nav-link { 
+            color: #666; 
+            text-decoration: none; 
+            padding: 15px 0; 
+            font-size: 0.9rem; 
+            transition: 0.3s;
+            border-bottom: 1px solid #111;
+        }
+        .nav-link:hover, .active { color: var(--tech-blue); }
+
+        /* MAIN CONTENT */
+        main { flex-grow: 1; padding: 40px; overflow-y: auto; }
+
+        .header-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+        .tier-badge { font-family: 'Orbitron'; background: var(--tech-blue); color: black; padding: 5px 15px; border-radius: 20px; font-size: 0.7rem; }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid #222;
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        /* STATUS METERS */
+        .status-meter { margin-bottom: 25px; }
+        .meter-label { display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 8px; color: #888; }
+        .bar-bg { background: #222; height: 8px; border-radius: 4px; overflow: hidden; }
+        .bar-fill { height: 100%; background: var(--hero-pink); }
+
+        .frequency-map {
+            width: 100%;
+            height: 200px;
+            background: #000;
+            border-radius: 10px;
+            border: 1px dashed #333;
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #444;
+            font-family: 'Orbitron';
+        }
+
+        .action-list { list-style: none; padding: 0; }
+        .action-item { 
+            padding: 15px; 
+            background: #1a1a1a; 
+            margin-bottom: 10px; 
+            border-radius: 8px; 
+            font-size: 0.85rem; 
+            border-left: 3px solid var(--safety-green);
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-logo">AEAH // SOVEREIGN</div>
+        <a href="#" class="nav-link active">Temple Overview</a>
+        <a href="#" class="nav-link">Frequency Shield</a>
+        <a href="#" class="nav-link">Good Parts Log</a>
+        <a href="#" class="nav-link">Legal Vault</a>
+        <a href="#" class="nav-link">Medical Pro Comms</a>
+        <div style="margin-top: auto;">
+            <a href="#" class="nav-link" style="color: var(--hero-pink);">Sign Out</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="header-bar">
+            <h1>Welcome back, <span style="color:var(--tech-blue)">Operator 772</span></h1>
+            <span class="tier-badge">TIER 2 VERIFIED HUMAN</span>
+        </div>
+
+        <div class="dashboard-grid">
+            
+            <div class="card">
+                <h3 style="font-family: 'Orbitron'; margin-top:0;">Temple Vitality</h3>
+                
+                <div class="status-meter">
+                    <div class="meter-label"><span>Biological Autonomy</span><span>88%</span></div>
+                    <div class="bar-bg"><div class="bar-fill" style="width: 88%; background: var(--safety-green);"></div></div>
+                </div>
+
+                <div class="status-meter">
+                    <div class="meter-label"><span>"Good Parts" Progress</span><span>64%</span></div>
+                    <div class="bar-bg"><div class="bar-fill" style="width: 64%;"></div></div>
+                </div>
+
+                <div class="status-meter">
+                    <div class="meter-label"><span>Frequency Interference Level</span><span>Low</span></div>
+                    <div class="bar-bg"><div class="bar-fill" style="width: 15%; background: var(--tech-blue);"></div></div>
+                </div>
+
+                <h4 style="font-family: 'Orbitron'; font-size: 0.8rem; margin-top: 30px; color: #666;">Local Environment Pulse</h4>
+                <div class="frequency-map">[ LIVE FREQUENCY WAVEFORM GRAPH ]</div>
+                
+            </div>
+
+            <div class="card">
+                <h3 style="font-family: 'Orbitron'; margin-top:0; font-size: 1rem;">Action Required</h3>
+                <ul class="action-list">
+                    <li class="action-item">Update Bio-Balanced Router firmware.</li>
+                    <li class="action-item">Log today's "Reclaiming Goodness" win.</li>
+                    <li class="action-item">Review 28th Amendment petition update.</li>
+                </ul>
+
+                <div style="margin-top: 40px; border-top: 1px solid #222; padding-top: 20px;">
+                    <h4 style="font-family: 'Orbitron'; font-size: 0.8rem; color: var(--hero-pink);">Shield Status: ACTIVE</h4>
+                    <p style="font-size: 0.75rem; color: #888;">Your proprietary identity encryption is masking your biometric signature from localized trackers.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
