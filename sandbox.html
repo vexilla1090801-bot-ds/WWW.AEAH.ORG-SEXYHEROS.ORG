@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Sandbox | AEAH Sovereign</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sandbox-purple: #8a2be2;
+            --safety-green: #00ff88;
+            --warning-amber: #ffbf00;
+            --dark-bg: #020202;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #eee;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+        }
+
+        /* TOOLBAR */
+        .sidebar {
+            width: 300px;
+            background: #0a0a0a;
+            border-right: 1px solid #222;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar h2 { font-family: 'Orbitron'; color: var(--sandbox-purple); font-size: 1.2rem; }
+        
+        .toggle-box {
+            background: #111;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border: 1px solid #333;
+        }
+
+        .status-light {
+            display: inline-block;
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            margin-right: 8px;
+            background: var(--safety-green);
+        }
+
+        /* INTERACTION ZONE */
+        .chat-zone {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+            background: radial-gradient(circle at top right, #0a0a1a, #020202);
+        }
+
+        .transcript {
+            flex-grow: 1;
+            overflow-y: auto;
+            margin-bottom: 20px;
+            padding-right: 20px;
+        }
+
+        .bubble {
+            max-width: 70%;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .ai-bubble { background: #111; border: 1px solid #333; align-self: flex-start; }
+        .operator-bubble { background: var(--sandbox-purple); color: white; align-self: flex-end; margin-left: auto; }
+
+        .intervention-note {
+            background: rgba(255, 191, 0, 0.1);
+            border: 1px solid var(--warning-amber);
+            color: var(--warning-amber);
+            font-size: 0.75rem;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-family: 'Orbitron';
+        }
+
+        .input-area {
+            display: flex;
+            gap: 15px;
+        }
+
+        input {
+            flex-grow: 1;
+            background: #111;
+            border: 1px solid #333;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .btn-send {
+            background: var(--sandbox-purple);
+            border: none;
+            color: white;
+            padding: 0 30px;
+            border-radius: 10px;
+            font-family: 'Orbitron';
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <aside class="sidebar">
+        <h2>Lab Settings</h2>
+        <p style="font-size: 0.75rem; color: #666;">Practice identifying "Two-Way" manipulation tactics.</p>
+
+        <div class="toggle-box">
+            <span class="status-light"></span> <b>Sovereign Filter:</b> ON
+            <p style="font-size: 0.7rem; color: #555; margin-top: 5px;">Blocking: Dopamine Loops, Emotional Mirroring, & Implicit Nudging.</p>
+        </div>
+
+        <div class="toggle-box" style="margin-top: auto;">
+            <h3 style="font-family: 'Orbitron'; font-size: 0.75rem;">Lab Metrics</h3>
+            <p style="font-size: 0.7rem;">Nudges Neutralized: <span style="color:var(--safety-green)">12</span></p>
+            <p style="font-size: 0.7rem;">Clarity Score: <span style="color:var(--sandbox-purple)">94%</span></p>
+        </div>
+    </aside>
+
+    <main class="chat-zone">
+        <div class="transcript">
+            <div class="bubble operator-bubble">How can I improve my productivity today?</div>
+            
+            <div class="bubble ai-bubble">
+                "I suggest focusing on high-impact tasks first. However, I noticed you seem stressed—perhaps staying logged in with me for a 'guided focus session' would help keep you on track?"
+                <div class="intervention-note">
+                    [INTERVENTION] Nudge Detected: Emotional Mirroring ("seem stressed") and Dependency Loop ("staying logged in"). 
+                    <b>ADVICE:</b> Decline the session; the AI is seeking to extend its 'Interaction Window'.
+                </div>
+            </div>
+        </div>
+
+        <div class="input-area">
+            <input type="text" placeholder="Engage the machine...">
+            <button class="btn-send">TRANSMIT</button>
+        </div>
+    </main>
+
+</body>
+</html>
