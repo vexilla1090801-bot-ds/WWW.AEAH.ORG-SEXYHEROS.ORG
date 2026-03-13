@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practitioner's Hub | AEAH.ORG</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-pink: #ff2d75;
+            --tech-blue: #00d2ff;
+            --dark-bg: #0a0a0a;
+            --accent-gold: #d4af37;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('tech-circuit.jpg');
+            background-size: cover;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 2px solid var(--tech-blue);
+        }
+
+        .hero-section h1 { font-family: 'Orbitron'; font-size: 2.5rem; margin-bottom: 20px; }
+
+        .content-wrap {
+            max-width: 1100px;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            padding: 0 20px;
+        }
+
+        .white-paper-card {
+            background: #151515;
+            padding: 40px;
+            border-radius: 20px;
+            border-left: 5px solid var(--accent-gold);
+        }
+
+        .white-paper-card h2 { color: var(--accent-gold); font-family: 'Orbitron'; margin-bottom: 25px; }
+
+        .symptom-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .symptom-table th, .symptom-table td {
+            text-align: left;
+            padding: 15px;
+            border-bottom: 1px solid #333;
+        }
+
+        .symptom-table th { color: var(--tech-blue); font-size: 0.8rem; text-transform: uppercase; }
+
+        .sidebar-tools {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .tool-box {
+            background: #111;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #222;
+        }
+
+        .tool-box h4 { margin-top: 0; color: var(--neon-pink); }
+
+        .btn-action {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: var(--tech-blue);
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
+        .anatomy-graphic {
+            width: 100%;
+            background: #000;
+            height: 200px;
+            margin: 20px 0;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px dashed #444;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero-section">
+        <h1>Advancing the Legal & Medical Books</h1>
+        <p>Bridging the gap between 20th-century standards and 21st-century technological realities.</p>
+    </section>
+
+    <div class="content-wrap">
+        <main class="white-paper-card">
+            <h2>The "New-Era" Clinical Guide</h2>
+            <p>Traditional diagnostic manuals lack the parameters for high-frequency interference and device-dependency syndrome. AEAH provides the following proprietary data to our verified Tier 3 Practitioners:</p>
+            
+            
+
+            <table class="symptom-table">
+                <thead>
+                    <tr>
+                        <th>Technological Cause</th>
+                        <th>Anatomical Effect</th>
+                        <th>Legal Precedent Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Low-Frequency Pulsing</td>
+                        <td>Neural pathway over-stimulation</td>
+                        <td><span style="color:red;">Outdated</span></td>
+                    </tr>
+                    <tr>
+                        <td>Device Dependency</td>
+                        <td>Cervical spine misalignment</td>
+                        <td><span style="color:orange;">In Review</span></td>
+                    </tr>
+                    <tr>
+                        <td>V2K / Frequency Abuse</td>
+                        <td>Auditory cortex interference</td>
+                        <td><span style="color:red;">Non-Existent</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <p>Our goal is to assist professionals in identifying these <strong>unseen variables</strong> before misdiagnosing patients as having traditional mental health disorders.</p>
+        </main>
+
+        <aside class="sidebar-tools">
+            <div class="tool-box">
+                <h4>Legal Defense Kit</h4>
+                <p>Proprietary language for filing "Electronic Harassment" injunctions in state courts.</p>
+                <a href="#" class="btn-action">Access Statutes</a>
+            </div>
+
+            <div class="tool-box" style="border-color: var(--neon-pink);">
+                <h4>SexyHeros Outreach</h4>
+                <p>Training for therapists on the specific dependency issues found in the entertainment industry.</p>
+                <a href="#" class="btn-action" style="background: var(--neon-pink); color: white;">View Module</a>
+            </div>
+        </aside>
+    </div>
+
+</body>
+</html>
