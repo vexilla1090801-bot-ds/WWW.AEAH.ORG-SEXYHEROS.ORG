@@ -3,198 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AEAH | SEXYHEROS Unified Portal</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>AEAH | SEXYHEROS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
     <style>
-        /* CORE STYLE PRESERVATION */
-        :root {
-            --hero-blue: #00d2ff;
-            --hero-pink: #ff2d75;
-            --dark-bg: #050505;
-            --glass: rgba(255, 255, 255, 0.03);
-        }
-
+        /* RESTORING ORIGINAL COLOR SCHEME & LAYOUT */
         body, html {
             margin: 0;
             padding: 0;
-            background-color: var(--dark-bg);
+            width: 100%;
+            height: 100%;
+            font-family: 'Orbitron', sans-serif;
+            background-color: #000;
             color: #fff;
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-            height: 100vh;
+            overflow: hidden;
         }
 
-        /* BACKGROUND DETAIL ENHANCEMENT */
-        .grid-overlay {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: 
-                linear-gradient(var(--hero-blue) 1px, transparent 1px),
-                linear-gradient(90deg, var(--hero-blue) 1px, transparent 1px);
-            background-size: 50px 50px;
-            opacity: 0.05;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .portal-container {
+        .container {
             display: flex;
-            height: 100vh;
-            position: relative;
-            z-index: 1;
+            width: 100%;
+            height: 100%;
         }
 
-        /* SIDE PANEL REFINEMENT */
+        /* SIDE PANELS */
         .side {
             flex: 1;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 60px;
-            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative;
             text-decoration: none;
-            overflow: hidden;
+            transition: 0.5s ease;
+            position: relative;
         }
 
-        .side:hover { flex: 1.2; }
-
-        /* LEFT SIDE: THE SUBJECT (RECOVERY) */
-        .left-side {
-            border-right: 1px solid rgba(0, 210, 255, 0.2);
-            background: linear-gradient(to right, #000, rgba(0, 210, 255, 0.05));
+        /* LEFT SIDE: SUBJECT (THE SURVIVOR) */
+        .subject {
+            background-color: #000;
+            border-right: 2px solid #00d2ff;
         }
-        .left-side:hover { background: rgba(0, 210, 255, 0.1); }
-
-        /* RIGHT SIDE: THE OPERATOR (HERO) */
-        .right-side {
-            background: linear-gradient(to left, #000, rgba(255, 45, 117, 0.05));
+        .subject:hover {
+            background-color: #001a22;
         }
-        .right-side:hover { background: rgba(255, 45, 117, 0.1); }
 
-        /* TEXT DETAIL */
+        /* RIGHT SIDE: HERO (THE OPERATOR) */
+        .hero {
+            background-color: #000;
+        }
+        .hero:hover {
+            background-color: #1a0008;
+        }
+
+        /* ORIGINAL LOGO STYLING */
+        .logo {
+            width: 250px; /* Restoring original size */
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .side:hover .logo {
+            transform: scale(1.1);
+        }
+
         h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 3rem;
-            margin-bottom: 10px;
+            font-size: 2.5rem;
             letter-spacing: 5px;
+            margin: 0;
             text-transform: uppercase;
         }
 
-        .left-side h1 { color: var(--hero-blue); text-shadow: 0 0 20px var(--hero-blue); }
-        .right-side h1 { color: var(--hero-pink); text-shadow: 0 0 20px var(--hero-pink); }
+        .subject h1 { color: #00d2ff; }
+        .hero h1 { color: #ff2d75; }
 
-        .subtitle {
-            font-size: 0.9rem;
-            font-weight: 300;
+        p {
+            font-size: 0.8rem;
             letter-spacing: 2px;
-            color: #aaa;
-            max-width: 400px;
-            text-align: center;
-            line-height: 1.6;
+            color: #666;
+            margin-top: 10px;
         }
 
-        /* MASTER NAVIGATION BUTTONS */
-        .portal-nav {
-            margin-top: 40px;
+        /* HIDDEN MASTER NAVIGATION (Accessible via Hover or Footer) */
+        .quick-nav {
+            position: absolute;
+            bottom: 40px;
             display: flex;
-            flex-direction: column;
-            gap: 15px;
-            width: 100%;
-            max-width: 300px;
+            gap: 20px;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        .side:hover .quick-nav {
+            opacity: 1;
         }
 
-        .nav-btn {
-            padding: 15px 25px;
-            border: 1px solid rgba(255,255,255,0.1);
-            background: var(--glass);
+        .nav-link {
             color: #fff;
+            font-size: 0.6rem;
             text-decoration: none;
-            font-family: 'Orbitron';
-            font-size: 0.75rem;
-            text-align: center;
-            transition: 0.3s;
-            backdrop-filter: blur(5px);
+            border: 1px solid #444;
+            padding: 5px 10px;
         }
-
-        .left-side .nav-btn:hover { border-color: var(--hero-blue); background: rgba(0, 210, 255, 0.2); }
-        .right-side .nav-btn:hover { border-color: var(--hero-pink); background: rgba(255, 45, 117, 0.2); }
-
-        /* CENTER BRANDING */
-        .center-logo {
-            position: absolute;
-            top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 10;
-            text-align: center;
-            pointer-events: none;
+        .nav-link:hover {
+            border-color: #fff;
         }
-
-        .center-logo img { width: 120px; filter: drop-shadow(0 0 15px white); }
-
-        /* BOTTOM UTILITY NAV */
-        .utility-bar {
-            position: absolute;
-            bottom: 30px;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            font-size: 0.7rem;
-            font-family: 'Orbitron';
-            color: #444;
-            z-index: 5;
-        }
-
-        .utility-bar a { color: #666; text-decoration: none; transition: 0.3s; }
-        .utility-bar a:hover { color: white; }
     </style>
 </head>
 <body>
 
-    <div class="grid-overlay"></div>
-
-    <div class="center-logo">
-        <h2 style="font-family: 'Orbitron'; letter-spacing: 10px; margin: 0;">AEAH</h2>
-        <div style="height: 1px; width: 150px; background: white; margin: 10px auto;"></div>
-        <p style="font-size: 0.6rem; letter-spacing: 3px;">SEXYHEROS UNIFIED</p>
-    </div>
-
-    <div class="portal-container">
+    <div class="container">
         
-        <a href="intake.html" class="side left-side">
+        <a href="intake.html" class="side subject">
+            <img src="subject-logo.png" alt="SUBJECT LOGO" class="logo">
             <h1>Subject</h1>
-            <p class="subtitle">Detection, Reporting, and Biological Stabilization for victims of technological battery.</p>
+            <p>I SEEK RECOVERY & REPORTING</p>
             
-            <div class="portal-nav">
-                <div class="nav-btn">P04 // Intake & Reporting</div>
-                <div class="nav-btn">P12 // Bio-Tech Scanner</div>
-                <div class="nav-btn">P29 // Sanctuary Map</div>
-                <div class="nav-btn">P43 // Bio-Calibration</div>
+            <div class="quick-nav">
+                <span class="nav-link">P04 // INTAKE</span>
+                <span class="nav-link">P29 // SANCTUARY</span>
+                <span class="nav-link">P43 // CALIBRATION</span>
             </div>
         </a>
 
-        <a href="hero-council.html" class="side right-side">
-            <h1>Operator</h1>
-            <p class="subtitle">Legal, Technical, and Strategic leadership in the movement to reclaim human sovereignty.</p>
+        <a href="hero-council.html" class="side hero">
+            <img src="hero-logo.png" alt="HERO LOGO" class="logo">
+            <h1>Hero</h1>
+            <p>I SEEK TO OPERATE & PROTECT</p>
             
-            <div class="portal-nav">
-                <div class="nav-btn">P08 // Hero Council</div>
-                <div class="nav-btn">P14 // Legal Bell-Ringer</div>
-                <div class="nav-btn">P22 // City-Build Blueprint</div>
-                <div class="nav-btn">P39 // Ethics Auditor Board</div>
+            <div class="quick-nav">
+                <span class="nav-link">P08 // COUNCIL</span>
+                <span class="nav-link">P14 // LEGAL</span>
+                <span class="nav-link">P39 // AUDITOR</span>
             </div>
         </a>
 
     </div>
 
-    <nav class="utility-bar">
-        <a href="master-index.html">P31 // MASTER SYSTEM INDEX</a>
-        <a href="ledger.html">P35 // ACCOUNTABILITY LEDGER</a>
-        <a href="horizon.html">P40 // CENTENNIAL VISION</a>
-        <a href="neighborhood-watch.html">P45 // LOCAL WATCH</a>
-    </nav>
+    <div style="position: absolute; bottom: 10px; width: 100%; text-align: center;">
+        <a href="master-index.html" style="color: #222; text-decoration: none; font-size: 0.5rem; letter-spacing: 2px;">AEAH // MASTER SYSTEM INDEX P31</a>
+    </div>
 
 </body>
 </html>
