@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intake Portal | AEAH & SEXYHEROS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-pink: #ff2d75;
+            --tech-blue: #00d2ff;
+            --dark-bg: #050505;
+            --input-bg: #1a1a1a;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 50px 20px;
+        }
+
+        .container { max-width: 900px; margin: 0 auto; }
+        
+        h1 { font-family: 'Orbitron'; color: var(--tech-blue); text-align: center; margin-bottom: 40px; }
+
+        .portal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .form-section {
+            background: #111;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #222;
+        }
+
+        .form-section.pink { border-top: 5px solid var(--neon-pink); }
+        .form-section.blue { border-top: 5px solid var(--tech-blue); }
+
+        label { display: block; margin-bottom: 8px; font-weight: bold; font-size: 0.8rem; text-transform: uppercase; color: #888; }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            background: var(--input-bg);
+            border: 1px solid #333;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .blue-btn { background-color: var(--tech-blue); color: black; }
+        .pink-btn { background-color: var(--neon-pink); color: white; }
+
+        .submit-btn:hover { opacity: 0.8; transform: translateY(-2px); }
+
+        .disclaimer { font-size: 0.7rem; color: #555; margin-top: 10px; line-height: 1.4; }
+
+        @media (max-width: 768px) { .portal-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Secure Evidence & Intake</h1>
+
+        <div class="portal-grid">
+            
+            <div class="form-section blue">
+                <h3>Electronic Abuse Report</h3>
+                <p style="font-size: 0.8rem; margin-bottom: 20px;">For victims of frequency interference or digital stalking.</p>
+                <form>
+                    <label>Incident Type</label>
+                    <select>
+                        <option>Electronic Frequency Interference</option>
+                        <option>Organized Stalking (Gangstalking)</option>
+                        <option>V2K / Neuro-Interference</option>
+                        <option>Unauthorized Device Mirroring</option>
+                    </select>
+
+                    <label>Symptoms Identified</label>
+                    <textarea placeholder="Describe physical or auditory sensations..." rows="4"></textarea>
+
+                    <label>Evidence Upload (Tier 2 Required)</label>
+                    <input type="file">
+
+                    <button type="submit" class="submit-btn blue-btn">Log Incident</button>
+                    <p class="disclaimer">Data is encrypted and used to build legal cases for legislative reform.</p>
+                </form>
+            </div>
+
+            <div class="form-section pink">
+                <h3>Hero & Professional Intake</h3>
+                <p style="font-size: 0.8rem; margin-bottom: 20px;">For medical professionals or entertainment influencers.</p>
+                <form>
+                    <label>Your Specialty</label>
+                    <select>
+                        <option>Medical Professional (Doctor/Nurse)</option>
+                        <option>Legal/Legislative Expert</option>
+                        <option>Entertainment Industry Influencer</option>
+                        <option>Mental Health Counselor</option>
+                    </select>
+
+                    <label>License / Verification Number</label>
+                    <input type="text" placeholder="NPI, Bar #, or Agent ID">
+
+                    <label>Area of Interest</label>
+                    <select>
+                        <option>Treating Tech-Addiction</option>
+                        <option>Consulting on Digital Law</option>
+                        <option>SEXYHEROS Program Partnership</option>
+                    </select>
+
+                    <button type="submit" class="submit-btn pink-btn">Apply for Access</button>
+                    <p class="disclaimer">Professionals will undergo Tier 3 vetting before accessing the Archive.</p>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
